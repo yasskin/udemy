@@ -46,7 +46,9 @@ P.P.S - I will send notices of course updates and improvements as they come. Res
 
 Don't forget to click link below to enter to win a licence for Sublime Text ($70 value).
 
+Mockingbird
 
+Mybalsamiq.com
 
 SUBLIME TEXT LICENSE GIVEAWAY  
 
