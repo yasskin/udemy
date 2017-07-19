@@ -11,3 +11,7 @@
 ## Cascading Style Sheets
 
 * CSS is the presentation layer
+
+* descendant - anywhere within that descendant selector
+
+* 

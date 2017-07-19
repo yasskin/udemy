@@ -1,0 +1,45 @@
+.red {
+  color: red;
+}
+
+#main {
+  font-weight: bold;
+}
+
+p,
+a, {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.article > a {
+  color: red;
+}
+
+a[href="http://www.google.com"] {
+  color: green;
+}
+
+input[type="text"] {
+  color: green;
+}
+
+img[alt~="Alex"] {
+  border: solid 1px black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+}
+
+p:hover {
+  font-size: 110%;
+}
+
+input[type="text"]:focus {
+    background: :#aaa;
+}
