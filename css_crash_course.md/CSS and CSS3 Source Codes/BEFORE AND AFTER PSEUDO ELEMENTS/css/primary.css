@@ -1,0 +1,13 @@
+.first::after{
+    content:"";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    color: #000;
+}
+
+.first{
+    background: #000;
+    color: #fff;
+}

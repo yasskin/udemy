@@ -1,0 +1,7 @@
+#container{
+    width: 180px;
+    height: 180px;
+    background: #bbb;
+    padding: 10px;
+    box-shadow:5px 5px 6px #000;
+}

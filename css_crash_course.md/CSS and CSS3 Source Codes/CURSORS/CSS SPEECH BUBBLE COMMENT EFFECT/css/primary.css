@@ -1,0 +1,30 @@
+body{
+    background-color: #f0f0ee;
+    font: 1em "Trebuchet MS";
+}
+.bubble-list .bubble img{
+    float: left;
+    width: 80px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+.bubble-list .bubble .bubble-content{
+   position: relative;
+    float: left;
+    margin-left: 20px;
+    width: 400px;
+    padding: 0 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.bubble-list .bubble .bubble-content .point{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 17px solid #000;
+    
+}

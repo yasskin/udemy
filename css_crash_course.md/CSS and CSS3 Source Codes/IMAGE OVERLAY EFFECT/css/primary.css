@@ -1,0 +1,19 @@
+.image-box{
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ccc;
+    border-radius: 5px;
+}
+
+.image-box span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0,0,0,.75);
+    color:#fff;
+    padding: 15px;
+    font: 1em Georgia,serif;
+    font-style: italic;
+    width: 100%;
+}

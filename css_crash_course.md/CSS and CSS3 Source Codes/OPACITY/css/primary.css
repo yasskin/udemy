@@ -1,0 +1,9 @@
+.opacity{
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    padding:10px;
+    opacity: 0.2;
+    filter:alpha(opacity=70);
+}

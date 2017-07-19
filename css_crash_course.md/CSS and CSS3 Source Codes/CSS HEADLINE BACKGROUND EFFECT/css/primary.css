@@ -1,0 +1,28 @@
+.container{
+    position: relative;
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+}
+.container img{
+    width: 100%;
+}
+.container h1{
+    position: absolute;
+    top: 20px;
+    font: 2.5em Arial;
+    width: 400px;
+    border-left: 10px solid #222;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+.container h1 a{
+    color: #f0f0f0;
+    text-decoration: none;
+}
+.container h1 span{
+  background-color: #222;
+  background-color: rgba(0,0,0,0.7);
+  padding: 3px 0 4px 0;
+  white-space: pre-wrap;
+}

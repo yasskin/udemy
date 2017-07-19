@@ -1,0 +1,20 @@
+.clearflx::after{
+content:":)";
+clear: both;
+display: block;
+visibility: hidden;
+height: 0;
+}
+.two-columns{
+    width: 500px;
+    background: #ddd;
+}
+.column-1, .column-2{
+    width: 49%;
+}
+.column-1{
+    float: left;
+}
+.column-2{
+    float: right;
+}

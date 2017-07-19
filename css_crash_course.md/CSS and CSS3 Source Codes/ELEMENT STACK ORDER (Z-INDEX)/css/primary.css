@@ -1,0 +1,14 @@
+.box{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+.box.light{
+    background-color: #ccc;
+    z-index: 9999;
+}
+.box.dark{
+    left: 100px;
+    background-color: #aaa;
+    z-index: 9999;
+}

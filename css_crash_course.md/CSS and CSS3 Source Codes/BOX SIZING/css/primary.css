@@ -1,0 +1,8 @@
+#box{
+    background: #ccc;
+    height: 100px;
+    width: 200px;
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,6 @@
+input[typ="submit"]{
+    width: 150px;
+    height: 80px;
+    background: url('..images/tick.png') no-repeat 50%;
+    text-indent: -1000px;
+}

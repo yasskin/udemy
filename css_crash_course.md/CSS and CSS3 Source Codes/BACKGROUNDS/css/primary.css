@@ -1,0 +1,8 @@
+.message{
+    
+    width: 200px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 2px 2px 2px 25px;    
+    background: #aaa url('../imagestick.png') no-repeat 10px;
+}

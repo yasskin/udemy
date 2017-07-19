@@ -1,0 +1,5 @@
+#container{
+    width: 680px;
+    height: 380px;
+    background: url('../images/tick.png') no-repeat 50% 50%, url('../images/bubble.png') no-repeat;
+}

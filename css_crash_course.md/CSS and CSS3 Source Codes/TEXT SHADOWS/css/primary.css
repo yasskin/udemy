@@ -1,0 +1,8 @@
+
+p{
+    margin: 0;
+    font-size: 1.6em;
+}
+p.shadow{
+    text-shadow: 5px 5px red, 10px 10px green;
+}

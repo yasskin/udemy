@@ -1,0 +1,7 @@
+#container{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    background: url('../images/tick.png') no-repeat 50% 50%;
+    background-size: contain;
+}

@@ -1,0 +1,12 @@
+body{
+    font-family: Vardana, sans-serif;
+}
+h1,h2,h3{
+    margin-top: 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+h1{text-decoration: underline;}
