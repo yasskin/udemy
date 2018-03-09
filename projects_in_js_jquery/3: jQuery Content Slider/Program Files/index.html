@@ -4,30 +4,50 @@
 		<title>Learn jQuery</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<style>
-			.red{color:red;}
-			.green{color:green;};
+			/* .red{color:red;}
+			.green{color:green;}; */
+			.red{ color: red };
+			.green { color: green };
 		</style>
-		
+
 		<script>
-			$(document).ready(function(){
-				/*
-				$('.myLink').on('mouseenter', function(){
-					$('h1').addClass('red');
-				});
-				
-				$('.myLink').on('mouseleave', function(){
-					$('h1').removeClass('red');
-				});
-				*/
-				$('.myLink').click(function(){
-					//$('h1').append('<h3>Hello World</h3>');
-					$('h1').css('font-size','40px');
-				});
+		$(document).ready(function() {
+
+			$('myLink').click(function() {
+				$('h1').replaceWith('<h1>Hello World</h1>');
 			});
+
+			// $('myLink').on('mouseenter', function() {
+			// 	alert('you clicked');
+			// 	$('h1').addClass(red);
+			// });
+      //
+			// $('myLink').on('mouseleave', function() {
+			// 	alert('you clicked');
+			// 	$('h1').removeClass(red);
+			});
+		});
+			// $(document).ready(function(){
+			// 	/*
+			// 	$('.myLink').on('mouseenter', function(){
+			// 		$('h1').addClass('red');
+			// 	});
+      //
+			// 	$('.myLink').on('mouseleave', function(){
+			// 		$('h1').removeClass('red');
+			// 	});
+			// 	*/
+			// 	$('.myLink').click(function(){
+			// 		//$('h1').append('<h3>Hello World</h3>');
+			// 		$('h1').css('font-size','40px');
+			// 	});
+			// });
 		</script>
 	</head>
 	<body>
 		<h1>Welcome Everyone</h1>
-		<a href="#" class="myLink">Click Me</a>
+		<a href="#" class="mylink">Click Me</a>
+		<!-- <h1>Welcome Everyone</h1>
+		<a href="#" class="myLink">Click Me</a> -->
 	</body>
 </html>
