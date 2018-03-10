@@ -33,13 +33,16 @@ window.onload = function() {
 	var framesPerSecond = 30;
 	setInterval(function() {
 			moveEverything();
-			drawEverything();	
+			drawEverything();
 		}, 1000/framesPerSecond);
 
 	canvas.addEventListener('mousemove',
 		function(evt) {
 			var mousePos = calculateMousePos(evt);
 			paddle1Y = mousePos.y - (PADDLE_HEIGHT/2);
+
+			console.log(paddle1Y);
+
 		});
 }
 
@@ -52,13 +55,13 @@ function ballReset() {
 function moveEverything() {
 	ballX = ballX + ballSpeedX;
 	ballY = ballY + ballSpeedY;
-	
+
 	if(ballX < 0) {
 		if(ballY > paddle1Y &&
 			ballY < paddle1Y+PADDLE_HEIGHT) {
 			ballSpeedX = -ballSpeedX;
 		} else {
-			ballReset();	
+			ballReset();
 		}
 	}
 	if(ballX > canvas.width) {

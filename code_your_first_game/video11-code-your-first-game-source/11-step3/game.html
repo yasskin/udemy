@@ -74,10 +74,10 @@ function ballReset() {
 
 function computerMovement() {
 	var paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
-	if(paddle2YCenter < ballY - 35) {
-		paddle2Y = paddle2Y + 6;
-	} else if(paddle2YCenter > ballY + 35) {
-		paddle2Y = paddle2Y - 6;
+	if(paddle2YCenter < ballY -35) {
+		paddle2Y += 6;
+	} else if(paddle2YCenter < ballY -35) {
+		paddle2Y -= 6;
 	}
 }
 
@@ -166,7 +166,7 @@ function drawEverything() {
 function colorCircle(centerX, centerY, radius, drawColor) {
 	canvasContext.fillStyle = drawColor;
 	canvasContext.beginPath();
-	canvasContext.arc(centerX, centerY, radius, 0,Math.PI*2,true);
+	canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2,true);
 	canvasContext.fill();
 }
 
