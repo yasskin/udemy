@@ -1,0 +1,13 @@
+
+.col,
+.col-md-5 {
+  background-color: tomato;
+  color: white;
+  border: 1px solid black;
+  height: 80px;
+}
+
+.row {
+  height: 100px;
+  background-color: rgba(201, 76, 76, 0.3);
+}

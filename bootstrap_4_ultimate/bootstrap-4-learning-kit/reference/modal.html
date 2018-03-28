@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <title>Bootstrap 4 Learning Kit - Reference - Components: Modal</title>
+  </head>
+  <body>
+    
+    <header>
+      <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="../index.html" class="navbar-brand">Bootstrap 4 Learning Kit</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layout</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="containers.html" class="dropdown-item">Containers</a>
+                  <a href="grid-system.html" class="dropdown-item">Grid system</a>
+                  <a href="media-object.html" class="dropdown-item">Media object</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="typography.html" class="dropdown-item">Typography</a>
+                  <a href="images.html" class="dropdown-item">Images</a>
+                  <a href="figures.html" class="dropdown-item">Figures</a>
+                  <a href="tables.html" class="dropdown-item">Tables</a>
+                  <a href="code.html" class="dropdown-item">Code</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="alerts.html" class="dropdown-item">Alerts</a>
+                  <a href="badges.html" class="dropdown-item">Badges</a>
+                  <a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+                  <a href="buttons.html" class="dropdown-item">Buttons</a>
+                  <a href="button-group.html" class="dropdown-item">Button group</a>
+                  <a href="card.html" class="dropdown-item">Card</a>
+                  <a href="carousel.html" class="dropdown-item">Carousel</a>
+                  <a href="collapse.html" class="dropdown-item">Collapse</a>
+                  <a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+                  <a href="forms-controls.html" class="dropdown-item">Forms – Controls</a>
+                  <a href="forms-layout.html" class="dropdown-item">Forms – Layout</a>
+                  <a href="forms-validation.html" class="dropdown-item">Forms – Validation</a>
+                  <a href="input-group.html" class="dropdown-item">Input group</a>
+                  <a href="jumbotron.html" class="dropdown-item">Jumbotron</a>
+                  <a href="list-group.html" class="dropdown-item">List group</a>
+                  <a href="modal.html" class="dropdown-item active">Modal</a>
+                  <a href="navs.html" class="dropdown-item">Navs</a>
+                  <a href="navbar.html" class="dropdown-item">Navbar</a>
+                  <a href="pagination.html" class="dropdown-item">Pagination</a>
+                  <a href="popovers.html" class="dropdown-item">Popovers</a>
+                  <a href="progress.html" class="dropdown-item">Progress</a>
+                  <a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+                  <a href="tooltips.html" class="dropdown-item">Tooltips</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilities</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="borders.html" class="dropdown-item">Borders</a>
+                  <a href="clearfix.html" class="dropdown-item">Clearfix</a>
+                  <a href="close-icon.html" class="dropdown-item">Close icon</a>
+                  <a href="colors.html" class="dropdown-item">Colors</a>
+                  <a href="display.html" class="dropdown-item">Display</a>
+                  <a href="embed.html" class="dropdown-item">Embed</a>
+                  <a href="flex.html" class="dropdown-item">Flex</a>
+                  <a href="float.html" class="dropdown-item">Float</a>
+                  <a href="image-replacement.html" class="dropdown-item">Image replacement</a>
+                  <a href="position.html" class="dropdown-item">Position</a>
+                  <a href="screen-readers.html" class="dropdown-item">Screen readers</a>
+                  <a href="sizing.html" class="dropdown-item">Sizing</a>
+                  <a href="spacing.html" class="dropdown-item">Spacing</a>
+                  <a href="text.html" class="dropdown-item">Text</a>
+                  <a href="vertical-align.html" class="dropdown-item">Vertical align</a>
+                  <a href="visibility.html" class="dropdown-item">Visibility</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="photo-gallery.html" class="dropdown-item">Photo gallery</a>
+                  <a href="video-gallery.html" class="dropdown-item">Video gallery</a>
+                  <a href="mixed-gallery.html" class="dropdown-item">Mixed gallery</a>
+                  <a href="audio-gallery.html" class="dropdown-item">Audio gallery</a>
+                  <a href="login.html" class="dropdown-item">Login</a>
+                  <a href="contact.html" class="dropdown-item">Contact</a>
+                  <a href="footer.html" class="dropdown-item">Footer</a>
+                  <a href="sitemap.html" class="dropdown-item">Sitemap</a>
+                  <a href="shortcuts.html" class="dropdown-item">Shortcuts</a>
+                  <a href="faq.html" class="dropdown-item">FAQ</a>
+                  <a href="thank-you.html" class="dropdown-item">Thank you</a>
+                  <a href="employees.html" class="dropdown-item">Employees</a>
+                  <a href="pricing-table.html" class="dropdown-item">Pricing table</a>
+                  <a href="create-account.html" class="dropdown-item">Create account</a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Toggle section">
+              <a href="../reference/modal.html" class="btn btn-dark">Reference</a>
+              <a href="../practice/modal.html" class="btn btn-secondary">Practice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="display-4">Components: Modal</h1>
+      <hr>
+      <main>
+
+        <!-- Link modal trigger -->
+        <a href="#" data-toggle="modal" data-target="#">Link modal trigger</a>
+
+        <!-- Button modal trigger -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#">Button modal trigger</button>
+
+        <br>
+
+        <!-- Modal with header, body, footer and dismiss button -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Normal modal</button>
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal with long, scrollable text -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLong">Modal with long text</button>
+        <div class="modal fade" id="modalLong" tabindex="-1" role="dialog" aria-labelledby="modalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat, urna ut pharetra ultricies, augue tellus euismod turpis, vitae semper ipsum augue a velit. Pellentesque id finibus velit. Ut sagittis maximus maximus. In aliquet enim sed turpis mollis ornare. Suspendisse elementum a magna eu luctus. Etiam tincidunt mattis mauris, non lobortis nulla tempor in. Sed lacinia metus viverra, scelerisque enim sed, sollicitudin magna. Sed non augue sit amet nisl tincidunt ultrices. Praesent nec lacus eget tortor ultricies pulvinar. Praesent euismod ut lorem sit amet bibendum.</p>
+                <p>Pellentesque vitae convallis magna. Morbi non elementum mi. Suspendisse at mollis arcu, eu tempus tellus. Aenean fringilla eleifend nisl. Aliquam erat volutpat. Sed a tortor quis tortor convallis mattis. Nunc congue massa vitae lectus dictum, a mattis metus dignissim.</p>
+                <p>Nulla feugiat, lorem sit amet vehicula hendrerit, velit eros pellentesque est, at dictum elit risus id diam. In ante lorem, blandit vel dui in, sagittis laoreet erat. Proin dictum sit amet urna ut placerat. Pellentesque laoreet, dolor vitae facilisis feugiat, quam quam gravida elit, nec sagittis orci metus at leo. In scelerisque felis vel neque lobortis ullamcorper. Praesent quis sagittis neque, nec eleifend neque. Suspendisse at consectetur eros. Mauris lectus libero, molestie vel dapibus sit amet, luctus gravida ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero neque, pretium quis malesuada eget, congue ac mauris.</p>
+                <p>Aenean quis tristique libero. Vestibulum sagittis, sapien gravida lobortis posuere, diam arcu auctor libero, at tempor mauris nulla vel odio. Phasellus semper eros rutrum mi scelerisque interdum. Maecenas euismod est sit amet justo vestibulum bibendum. Etiam scelerisque sodales nisi nec efficitur. Pellentesque arcu mauris, accumsan eget mollis at, ultrices id ante. Duis in mi eget nisi euismod gravida. Cras pharetra sollicitudin elit, vel eleifend felis dignissim non. Integer leo ex, feugiat eu lorem egestas, mollis suscipit nulla. Duis quis tellus nulla. Maecenas risus ipsum, fringilla at orci sit amet, mattis fringilla orci. Vivamus odio tellus, ornare eu leo id, pellentesque sodales ante.</p>
+                <p>Sed laoreet ut ligula eget fringilla. Suspendisse dapibus dui at ex dictum hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi efficitur ac purus eget dignissim. Aliquam ultrices, orci finibus sollicitudin tempus, elit metus scelerisque magna, a rhoncus justo nisl vitae lectus. Nam mollis sed est ut ullamcorper. Curabitur consequat feugiat erat quis molestie. Fusce suscipit sem et nulla dignissim, id malesuada felis laoreet. Cras leo ligula, vulputate id mi ac, gravida porta sem. Mauris ullamcorper lectus ac eleifend elementum. Ut id velit consequat, facilisis leo vitae, volutpat nisi. Nunc hendrerit libero mi. Integer scelerisque mattis neque placerat condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla eu odio mi. Duis interdum vulputate turpis pretium congue.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSmall">Small modal</button>
+        <div class="modal fade" id="modalSmall" tabindex="-1" role="dialog" aria-labelledby="modalSmallTitle" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalSmallTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Large modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLarge">Large modal</button>
+        <div class="modal fade" id="modalLarge" tabindex="-1" role="dialog" aria-labelledby="modalLargeTitle" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLargeTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vertically centered modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalVertical">Vertically centered modal</button>
+        <div class="modal fade" id="modalVertical" tabindex="-1" role="dialog" aria-labelledby="modalVerticalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalVerticalTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal without animation -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNoAnimation">Modal without animation</button>
+        <div class="modal" id="modalNoAnimation" tabindex="-1" role="dialog" aria-labelledby="modalNoAnimationTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalNoAnimationTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal without backdrop functionality -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNoBackdrop" data-backdrop="static">Modal without backdrop</button>
+        <div class="modal fade" id="modalNoBackdrop" tabindex="-1" role="dialog" aria-labelledby="modalNoBackdropTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalNoBackdropTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal without escape key functionality -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalKeyboard" data-keyboard="false">Modal without keyboard</button>
+        <div class="modal fade" id="modalKeyboard" tabindex="-1" role="dialog" aria-labelledby="modalKeyboardTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalKeyboardTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

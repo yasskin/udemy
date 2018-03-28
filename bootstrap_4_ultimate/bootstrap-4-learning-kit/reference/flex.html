@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Bootstrap 4 Learning Kit - Reference - Utilities: Flex</title>
+
+    <!-- Styling to better show these examples -->
+    <style type="text/css">
+      .d-flex,
+      .d-inline-flex {
+        background-color: lightgrey;
+        border: 1px solid white;
+      }
+      .d-flex div {
+        background-color: tomato;
+      }
+      [class*=align-items-],
+      .example-alignSelf,
+      [class*=align-content-] {
+        height: 200px;
+      }
+      .responsive-examples {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="../index.html" class="navbar-brand">Bootstrap 4 Learning Kit</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layout</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="containers.html" class="dropdown-item">Containers</a>
+                  <a href="grid-system.html" class="dropdown-item">Grid system</a>
+                  <a href="media-object.html" class="dropdown-item">Media object</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="typography.html" class="dropdown-item">Typography</a>
+                  <a href="images.html" class="dropdown-item">Images</a>
+                  <a href="figures.html" class="dropdown-item">Figures</a>
+                  <a href="tables.html" class="dropdown-item">Tables</a>
+                  <a href="code.html" class="dropdown-item">Code</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="alerts.html" class="dropdown-item">Alerts</a>
+                  <a href="badges.html" class="dropdown-item">Badges</a>
+                  <a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+                  <a href="buttons.html" class="dropdown-item">Buttons</a>
+                  <a href="button-group.html" class="dropdown-item">Button group</a>
+                  <a href="card.html" class="dropdown-item">Card</a>
+                  <a href="carousel.html" class="dropdown-item">Carousel</a>
+                  <a href="collapse.html" class="dropdown-item">Collapse</a>
+                  <a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+                  <a href="forms-controls.html" class="dropdown-item">Forms – Controls</a>
+                  <a href="forms-layout.html" class="dropdown-item">Forms – Layout</a>
+                  <a href="forms-validation.html" class="dropdown-item">Forms – Validation</a>
+                  <a href="input-group.html" class="dropdown-item">Input group</a>
+                  <a href="jumbotron.html" class="dropdown-item">Jumbotron</a>
+                  <a href="list-group.html" class="dropdown-item">List group</a>
+                  <a href="modal.html" class="dropdown-item">Modal</a>
+                  <a href="navs.html" class="dropdown-item">Navs</a>
+                  <a href="navbar.html" class="dropdown-item">Navbar</a>
+                  <a href="pagination.html" class="dropdown-item">Pagination</a>
+                  <a href="popovers.html" class="dropdown-item">Popovers</a>
+                  <a href="progress.html" class="dropdown-item">Progress</a>
+                  <a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+                  <a href="tooltips.html" class="dropdown-item">Tooltips</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilities</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="borders.html" class="dropdown-item">Borders</a>
+                  <a href="clearfix.html" class="dropdown-item">Clearfix</a>
+                  <a href="close-icon.html" class="dropdown-item">Close icon</a>
+                  <a href="colors.html" class="dropdown-item">Colors</a>
+                  <a href="display.html" class="dropdown-item">Display</a>
+                  <a href="embed.html" class="dropdown-item">Embed</a>
+                  <a href="flex.html" class="dropdown-item active">Flex</a>
+                  <a href="float.html" class="dropdown-item">Float</a>
+                  <a href="image-replacement.html" class="dropdown-item">Image replacement</a>
+                  <a href="position.html" class="dropdown-item">Position</a>
+                  <a href="screen-readers.html" class="dropdown-item">Screen readers</a>
+                  <a href="sizing.html" class="dropdown-item">Sizing</a>
+                  <a href="spacing.html" class="dropdown-item">Spacing</a>
+                  <a href="text.html" class="dropdown-item">Text</a>
+                  <a href="vertical-align.html" class="dropdown-item">Vertical align</a>
+                  <a href="visibility.html" class="dropdown-item">Visibility</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="photo-gallery.html" class="dropdown-item">Photo gallery</a>
+                  <a href="video-gallery.html" class="dropdown-item">Video gallery</a>
+                  <a href="mixed-gallery.html" class="dropdown-item">Mixed gallery</a>
+                  <a href="audio-gallery.html" class="dropdown-item">Audio gallery</a>
+                  <a href="login.html" class="dropdown-item">Login</a>
+                  <a href="contact.html" class="dropdown-item">Contact</a>
+                  <a href="footer.html" class="dropdown-item">Footer</a>
+                  <a href="sitemap.html" class="dropdown-item">Sitemap</a>
+                  <a href="shortcuts.html" class="dropdown-item">Shortcuts</a>
+                  <a href="faq.html" class="dropdown-item">FAQ</a>
+                  <a href="thank-you.html" class="dropdown-item">Thank you</a>
+                  <a href="employees.html" class="dropdown-item">Employees</a>
+                  <a href="pricing-table.html" class="dropdown-item">Pricing table</a>
+                  <a href="create-account.html" class="dropdown-item">Create account</a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Toggle section">
+              <a href="../reference/flex.html" class="btn btn-dark">Reference</a>
+              <a href="../practice/flex.html" class="btn btn-secondary">Practice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="display-4">Utilities: Flex</h1>
+      <hr>
+      <main>
+
+        <!-- Create flexbox container and transform direct children elements to flex items -->
+        <div class="d-flex">Flexbox container</div>
+
+        <!-- Create inline flexbox container and transform direct children elements to flex items -->
+        <div class="d-inline-flex">Inline flexbox container</div>
+
+        <!-- Flex direction: row -->
+        <div class="d-flex flex-row">
+          <div>Flex direction row</div>
+          <div>Flex direction row</div>
+          <div>Flex direction row</div>
+        </div>
+
+        <!-- Flex direction: row-reverse -->
+        <div class="d-flex flex-row-reverse">
+          <div>Flex direction row-reverse</div>
+          <div>Flex direction row-reverse</div>
+          <div>Flex direction row-reverse</div>
+        </div>
+
+        <!-- Flex direction: column -->
+        <div class="d-flex flex-column">
+          <div>Flex direction column</div>
+          <div>Flex direction column</div>
+          <div>Flex direction column</div>
+        </div>
+
+        <!-- Flex direction: column-reverse -->
+        <div class="d-flex flex-column-reverse">
+          <div>Flex direction column-reverse</div>
+          <div>Flex direction column-reverse</div>
+          <div>Flex direction column-reverse</div>
+        </div>
+
+        <!-- Justify content -->
+        <div class="d-flex justify-content-start">
+          <div>Justify content start</div>
+          <div>Justify content start</div>
+          <div>Justify content start</div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div>Justify content center</div>
+          <div>Justify content center</div>
+          <div>Justify content center</div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <div>Justify content end</div>
+          <div>Justify content end</div>
+          <div>Justify content end</div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div>Justify content between</div>
+          <div>Justify content between</div>
+          <div>Justify content between</div>
+        </div>
+        <div class="d-flex justify-content-around">
+          <div>Justify content around</div>
+          <div>Justify content around</div>
+          <div>Justify content around</div>
+        </div>
+
+        <!-- Align items -->
+        <div class="d-flex align-items-start">
+          <div>Align items start</div>
+          <div>Align items start</div>
+          <div>Align items start</div>
+        </div>
+        <div class="d-flex align-items-center">
+          <div>Align items center</div>
+          <div>Align items center</div>
+          <div>Align items center</div>
+        </div>
+        <div class="d-flex align-items-end">
+          <div>Align items end</div>
+          <div>Align items end</div>
+          <div>Align items end</div>
+        </div>
+        <div class="d-flex align-items-baseline">
+          <div>Align items baseline</div>
+          <div>Align items baseline</div>
+          <div>Align items baseline</div>
+        </div>
+        <div class="d-flex align-items-stretch">
+          <div>Align items stretch</div>
+          <div>Align items stretch</div>
+          <div>Align items stretch</div>
+        </div>
+
+        <!-- Align self -->
+        <div class="d-flex example-alignSelf">
+          <div class="align-self-start">Align self start</div>
+          <div>Flex item</div>
+          <div>Flex item</div>
+        </div>
+        <div class="d-flex example-alignSelf">
+          <div>Flex item</div>
+          <div class="align-self-center">Align self center</div>
+          <div>Flex item</div>
+        </div>
+        <div class="d-flex example-alignSelf">
+          <div>Flex item</div>
+          <div>Flex item</div>
+          <div class="align-self-end">Align self end</div>
+        </div>
+        <div class="d-flex example-alignSelf">
+          <div class="align-self-baseline">Align self baseline</div>
+          <div>Flex item</div>
+          <div>Flex item</div>
+        </div>
+        <div class="d-flex example-alignSelf">
+          <div>Flex item</div>
+          <div class="align-self-stretch">Align self stretch</div>
+          <div>Flex item</div>
+        </div>
+
+        <!-- Horizontal auto margins with justify-content -->
+        <div class="d-flex justify-content-start">
+          <div>Flex item</div>
+          <div>Flex item</div>
+          <div class="ml-auto">Margin left auto</div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <div class="mr-auto">Margin right auto</div>
+          <div>Flex item</div>
+          <div>Flex item</div>
+        </div>
+
+        <!-- Vertical auto margins with align-items -->
+        <div class="d-flex flex-column align-items-start">
+          <div class="mb-auto">Margin bottom auto</div>
+          <div>Flex item</div>
+          <div>Flex item</div>
+        </div>
+        <div class="d-flex flex-column align-items-end">
+          <div>Flex item</div>
+          <div>Flex item</div>
+          <div class="mt-auto">Margin top auto</div>
+        </div>
+
+        <!-- Wrap: nowrap -->
+        <div class="d-flex flex-nowrap">
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+          <div>Flex-wrap nowrap</div>
+        </div>
+
+        <!-- Wrap: wrap -->
+        <div class="d-flex flex-wrap">
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+          <div>Flex-wrap wrap</div>
+        </div>
+
+        <!-- Wrap: wrap-reverse -->
+        <div class="d-flex flex-wrap-reverse">
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+          <div>Flex-wrap reverse</div>
+        </div>
+
+        <!-- Order: order-first, order-last and order-0 to order-12 -->
+        <div class="d-flex">
+          <div class="order-last">First, but last</div>
+          <div class="order-8">Second, but number 5</div>
+          <div class="order-4">Third, but number 4</div>
+          <div class="order-2">Fourth, but number 3</div>
+          <div class="order-first">Fifth, but first</div>
+          <div>Last, but unordered, so number 2</div>
+        </div>
+
+        <!-- Align content -->
+        <div class="d-flex align-content-start flex-wrap">
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+          <div>Align content start</div>
+        </div>
+        <div class="d-flex align-content-center flex-wrap">
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+          <div>Align content center</div>
+        </div>
+        <div class="d-flex align-content-end flex-wrap">
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+          <div>Align content end</div>
+        </div>
+        <div class="d-flex align-content-between flex-wrap">
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+          <div>Align content between</div>
+        </div>
+        <div class="d-flex align-content-around flex-wrap">
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+          <div>Align content around</div>
+        </div>
+        <div class="d-flex align-content-stretch flex-wrap">
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+          <div>Align content stretch</div>
+        </div>
+
+        <!-- Responsive utility classes exist for all the flexbox utilities: display, flex-direction, justify-content, align-items, align-self, flex-wrap, order and align-content. The following are just examples. -->
+        <div class="responsive-examples">
+          <div class="d-sm-flex"></div>
+          <div class="d-sm-inline-flex"></div>
+          <div class="d-flex flex-md-row"></div>
+          <div class="d-flex flex-md-row-reverse"></div>
+          <div class="d-flex flex-lg-column"></div>
+          <div class="d-flex flex-lg-column-reverse"></div>
+          <div class="d-flex justify-content-xl-start"></div>
+          <div class="d-flex justify-content-xl-center"></div>
+          <div class="d-flex justify-content-xl-end"></div>
+          <div class="d-flex justify-content-xl-between"></div>
+          <div class="d-flex justify-content-xl-around"></div>
+          <div class="d-flex align-items-sm-start"></div>
+          <div class="d-flex align-items-sm-center"></div>
+          <div class="d-flex align-items-sm-end"></div>
+          <div class="d-flex align-items-sm-baseline"></div>
+          <div class="d-flex align-items-sm-stretch"></div>
+          <div class="d-flex">
+            <div class="align-self-md-start"></div>
+          </div>
+          <div class="d-flex">
+            <div class="align-self-md-center"></div>
+          </div>
+          <div class="d-flex">
+            <div class="align-self-md-end"></div>
+          </div>
+          <div class="d-flex">
+            <div class="align-self-md-baseline"></div>
+          </div>
+          <div class="d-flex">
+            <div class="align-self-md-stretch"></div>
+          </div>
+          <div class="d-flex flex-lg-nowrap"></div>
+          <div class="d-flex flex-lg-wrap"></div>
+          <div class="d-flex flex-lg-wrap-reverse"></div>
+          <div class="d-flex">
+            <div class="order-lg-3"></div>
+            <div class="order-lg-2"></div>
+            <div class="order-lg-1"></div>
+          </div>
+          <div class="d-flex align-content-sm-start"></div>
+          <div class="d-flex align-content-sm-center"></div>
+          <div class="d-flex align-content-sm-end"></div>
+          <div class="d-flex align-content-sm-around"></div>
+          <div class="d-flex align-content-sm-stretch"></div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

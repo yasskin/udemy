@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Bootstrap 4 Learning Kit - Practice - Components: Forms – Controls</title>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="../index.html" class="navbar-brand">Bootstrap 4 Learning Kit</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layout</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="containers.html" class="dropdown-item">Containers</a>
+                  <a href="grid-system.html" class="dropdown-item">Grid system</a>
+                  <a href="media-object.html" class="dropdown-item">Media object</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="typography.html" class="dropdown-item">Typography</a>
+                  <a href="images.html" class="dropdown-item">Images</a>
+                  <a href="figures.html" class="dropdown-item">Figures</a>
+                  <a href="tables.html" class="dropdown-item">Tables</a>
+                  <a href="code.html" class="dropdown-item">Code</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="alerts.html" class="dropdown-item">Alerts</a>
+                  <a href="badges.html" class="dropdown-item">Badges</a>
+                  <a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+                  <a href="buttons.html" class="dropdown-item">Buttons</a>
+                  <a href="button-group.html" class="dropdown-item">Button group</a>
+                  <a href="card.html" class="dropdown-item">Card</a>
+                  <a href="carousel.html" class="dropdown-item">Carousel</a>
+                  <a href="collapse.html" class="dropdown-item">Collapse</a>
+                  <a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+                  <a href="forms-controls.html" class="dropdown-item active">Forms – Controls</a>
+                  <a href="forms-layout.html" class="dropdown-item">Forms – Layout</a>
+                  <a href="forms-validation.html" class="dropdown-item">Forms – Validation</a>
+                  <a href="input-group.html" class="dropdown-item">Input group</a>
+                  <a href="jumbotron.html" class="dropdown-item">Jumbotron</a>
+                  <a href="list-group.html" class="dropdown-item">List group</a>
+                  <a href="modal.html" class="dropdown-item">Modal</a>
+                  <a href="navs.html" class="dropdown-item">Navs</a>
+                  <a href="navbar.html" class="dropdown-item">Navbar</a>
+                  <a href="pagination.html" class="dropdown-item">Pagination</a>
+                  <a href="popovers.html" class="dropdown-item">Popovers</a>
+                  <a href="progress.html" class="dropdown-item">Progress</a>
+                  <a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+                  <a href="tooltips.html" class="dropdown-item">Tooltips</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilities</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="borders.html" class="dropdown-item">Borders</a>
+                  <a href="clearfix.html" class="dropdown-item">Clearfix</a>
+                  <a href="close-icon.html" class="dropdown-item">Close icon</a>
+                  <a href="colors.html" class="dropdown-item">Colors</a>
+                  <a href="display.html" class="dropdown-item">Display</a>
+                  <a href="embed.html" class="dropdown-item">Embed</a>
+                  <a href="flex.html" class="dropdown-item">Flex</a>
+                  <a href="float.html" class="dropdown-item">Float</a>
+                  <a href="image-replacement.html" class="dropdown-item">Image replacement</a>
+                  <a href="position.html" class="dropdown-item">Position</a>
+                  <a href="screen-readers.html" class="dropdown-item">Screen readers</a>
+                  <a href="sizing.html" class="dropdown-item">Sizing</a>
+                  <a href="spacing.html" class="dropdown-item">Spacing</a>
+                  <a href="text.html" class="dropdown-item">Text</a>
+                  <a href="vertical-align.html" class="dropdown-item">Vertical align</a>
+                  <a href="visibility.html" class="dropdown-item">Visibility</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="photo-gallery.html" class="dropdown-item">Photo gallery</a>
+                  <a href="video-gallery.html" class="dropdown-item">Video gallery</a>
+                  <a href="mixed-gallery.html" class="dropdown-item">Mixed gallery</a>
+                  <a href="audio-gallery.html" class="dropdown-item">Audio gallery</a>
+                  <a href="login.html" class="dropdown-item">Login</a>
+                  <a href="contact.html" class="dropdown-item">Contact</a>
+                  <a href="footer.html" class="dropdown-item">Footer</a>
+                  <a href="sitemap.html" class="dropdown-item">Sitemap</a>
+                  <a href="shortcuts.html" class="dropdown-item">Shortcuts</a>
+                  <a href="faq.html" class="dropdown-item">FAQ</a>
+                  <a href="thank-you.html" class="dropdown-item">Thank you</a>
+                  <a href="employees.html" class="dropdown-item">Employees</a>
+                  <a href="pricing-table.html" class="dropdown-item">Pricing table</a>
+                  <a href="create-account.html" class="dropdown-item">Create account</a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Toggle section">
+              <a href="../reference/forms-controls.html" class="btn btn-secondary">Reference</a>
+              <a href="../practice/forms-controls.html" class="btn btn-dark">Practice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="display-4">Components: Forms – Controls</h1>
+      <hr>
+      <main>
+
+        <!-- Wrapper for input fields -->
+        <form class="">
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="text" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="search" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="email" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="url" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="tel" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="password" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="number" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="datetime-local" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="date" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="month" placeholder="Example" id="example-input">
+          </div
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="week" placeholder="Example" id="example-input">
+          </div
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="time" placeholder="Example" id="example-input">
+          </div
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <input class="form-control" type="color" placeholder="Example" id="example-input">
+          </div>
+          <div class="form-group">
+            <label for="example-input">Example</label>
+            <textarea class="form-control" type="text" placeholder="Example" id="example-input" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="example-input">Select One</label>
+            <select class="form-control" id="example-input" multiple>
+              <option value="">Select</option>
+              <option value="1">Option One</option>
+              <option value="2">Option Two</option>
+              <option value="3">Option Three</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="example-input">File input</label>
+            <input type="file" class="form-control-file" id="example-input">
+          </div>
+
+          <div class="form-group">
+            <label for="example-input">Range Input</label>
+            <input type="rabge" class="form-control-rabge" id="example-input">
+          </div>
+
+          <form class="" action="index.html" method="post">
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="checkbox1" value="optionOne">
+              <label class="form-check-label" for="checkbox1">Option one</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="checkbox1" value="optionOne">
+              <label class="form-check-label" for="checkbox2">Option two</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="checkbox1" value="optionOne" disabled aria-label="Option three">
+              <label class="form-check-label" for="checkbox3">Option three</label>
+            </div>
+          </form>
+
+          <div class="form-group">
+            <label for="input">Text</label>
+            <input type="text" class="form-control" name="" value="Disabled" id="input" aria-describedby="input-helpBlock">
+            <small id="input-helpBlock" class="form-text">Block level help text</small>
+          </div>
+
+        </form>
+
+        <!-- Custom Controls -->
+
+        <form>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="custom1" value="custom">
+            <label class="custom-control-label" for="custom">Custom checkbox</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" name="radioGroup" id="custom2" value="custom" disabled>
+            <label class="custom-control-label" for="custom">Custom checkbox</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" name="radioGroup" id="custom3" value="custom">
+            <label class="custom-control-label" for="custom">Custom checkbox</label>
+          </div>
+
+          <div class="form-group">
+            <label for="customSelect" class="sr-only">Custom select</label>
+            <select class="form-control custom-select custom-select-lg" id="customSelect" name="">
+                <option value="" selected>Custom Select</option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" id="fileCustom" class="custom-file-input">
+              <label for="fileCustom"></label>
+            </div>
+          </div>
+
+
+        </form>
+
+
+
+        <!-- Text input types -->
+        <div>
+          <label for="example-text-input">Text</label>
+          <input type="text" placeholder="Example text input" id="example-text-input">
+        </div>
+        <div>
+          <label for="example-search-input">Search</label>
+          <input type="search" placeholder="Example search input" id="example-search-input">
+        </div>
+        <div>
+          <label for="example-email-input">Email</label>
+          <input type="email" placeholder="example@email.com" id="example-email-input">
+        </div>
+        <div>
+          <label for="example-url-input">URL</label>
+          <input type="url" placeholder="https://exampleurl.com" id="example-url-input">
+        </div>
+        <div>
+          <label for="example-tel-input">Telephone</label>
+          <input type="tel" placeholder="0123456789" id="example-tel-input">
+        </div>
+        <div>
+          <label for="example-password-input">Password</label>
+          <input type="password" placeholder="examplepassword" id="example-password-input">
+        </div>
+        <div>
+          <label for="example-number-input">Number</label>
+          <input type="number" placeholder="1234" id="example-number-input">
+        </div>
+        <div>
+          <label for="example-datetime-local-input">Date and time</label>
+          <input type="datetime-local" id="example-datetime-local-input">
+        </div>
+        <div>
+          <label for="example-date-input">Date</label>
+          <input type="date" id="example-date-input">
+        </div>
+        <div>
+          <label for="example-month-input">Month</label>
+          <input type="month" id="example-month-input">
+        </div>
+        <div>
+          <label for="example-week-input">Week</label>
+          <input type="week" id="example-week-input">
+        </div>
+        <div>
+          <label for="example-time-input">Time</label>
+          <input type="time" id="example-time-input">
+        </div>
+        <div>
+          <label for="example-color-input">Color</label>
+          <input type="color" id="example-color-input">
+        </div>
+
+        <!-- Textarea -->
+        <div>
+          <label for="example-textarea">Textarea</label>
+          <textarea id="example-textarea" rows="5" placeholder="Write your message here."></textarea>
+        </div>
+
+        <!-- Select -->
+        <div>
+          <label for="example-select-one">Select one</label>
+          <select id="example-select-one">
+            <option selected>Select</option>
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+            <option value="3">Option three</option>
+          </select>
+        </div>
+
+        <!-- Select multiple -->
+        <div>
+          <label for="example-select-multiple">Select multiple</label>
+          <select multiple id="example-select-multiple">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <!-- File input -->
+        <div>
+          <label for="example-input-file">File input</label>
+          <input type="file" id="example-input-file">
+        </div>
+
+        <!-- Range input -->
+        <div>
+          <label for="example-input-range">Range input</label>
+          <input type="range" id="example-input-range">
+        </div>
+
+        <!-- Stacked checkboxes -->
+        <div>
+          <input type="checkbox" id="exampleCheckbox1" value="optionOne">
+          <label for="exampleCheckbox1">Option one</label>
+        </div>
+        <div>
+          <input type="checkbox" id="exampleCheckbox2" value="optionTwo">
+          <label for="exampleCheckbox2">Option two</label>
+        </div>
+        <div>
+          <input type="checkbox" id="exampleCheckbox3" value="optionThree" disabled>
+          <label for="exampleCheckbox3">Option three is disabled</label>
+        </div>
+
+        <!-- Inline checkboxes -->
+        <div>
+          <input type="checkbox" id="exampleCheckbox1" value="optionOne">
+          <label for="exampleCheckbox1">Option one</label>
+        </div>
+        <div>
+          <input type="checkbox" id="exampleCheckbox2" value="optionTwo">
+          <label for="exampleCheckbox2">Option two</label>
+        </div>
+        <div class="form-check form-check-inline disabled">
+          <input type="checkbox" id="exampleCheckbox3" value="optionThree" disabled>
+          <label for="exampleCheckbox3">Option three is disabled</label>
+        </div>
+
+        <!-- Checkbox without label -->
+        <div>
+          <input type="checkbox" id="exampleCheckbox1" value="optionOne">
+        </div>
+
+        <!-- Stacked radio buttons -->
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios1" value="optionOne" checked>
+          <label for="exampleRadios1">Option one</label>
+        </div>
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios2" value="optionTwo">
+          <label for="exampleRadios2">Option two</label>
+        </div>
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios3" value="optionThree" disabled>
+          <label for="exampleRadios3">Option three is disabled</label>
+        </div>
+
+        <!-- Inline radio buttons -->
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios1" value="optionOne" checked>
+          <label for="exampleRadios1">Option one</label>
+        </div>
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios2" value="optionTwo">
+          <label for="exampleRadios2">Option two</label>
+        </div>
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios3" value="optionThree" disabled>
+          <label for="exampleRadios3">Option three is disabled</label>
+        </div>
+
+        <!-- Radio button without label -->
+        <div>
+          <input type="radio" name="exampleRadios" id="exampleRadios1" value="optionOne"">
+        </div>
+
+        <!-- Disabled input -->
+        <div>
+          <label for="disabled-text-input">Text</label>
+          <input type="text" value="Disabled text input" id="disabled-text-input">
+        </div>
+
+        <!-- Read-only input -->
+        <div>
+          <label for="readonly-text-input">Text</label>
+          <input type="text" value="Read-only text input" id="readonly-text-input">
+        </div>
+
+        <!-- Read-only input styled as plain text -->
+        <div>
+          <label for="readonly-text-input">Text</label>
+          <input type="text" value="Read-only text input" id="readonly-text-input">
+        </div>
+
+        <!-- Block level help text -->
+        <label for="input-helpText">Input</label>
+        <input type="password" id="input-helpText">
+        <small id="input-helpBlock">Block level help text for input.</small>
+
+        <!-- Inline help text -->
+        <form>
+          <label for="input-helpText">Password</label>
+          <input type="password" id="input-helpText">
+          <small id="input-helpInline">Inline help text for input.</small>
+        </form>
+
+        <!-- Custom checkbox -->
+        <div>
+          <input type="checkbox" id="checkboxCustom" value="customCheckbox">
+          <label for="checkboxCustom">Custom checkbox</label>
+        </div>
+
+        <!-- Custom radio buttons -->
+        <div>
+          <input type="radio" id="radioCustom1" name="radioCustom" value="optionOne">
+          <label for="radioCustom1">Custom radio 1</label>
+        </div>
+        <div>
+          <input type="radio" id="radioCustom2" name="radioCustom" value="optionTwo">
+          <label for="radioCustom2">Custom radio 2</label>
+        </div>
+
+        <!-- Disabled custom checkbox -->
+        <div>
+          <input type="checkbox" id="checkboxCustomDisabled" value="customCheckbox">
+          <label for="checkboxCustomDisabled">Custom checkbox</label>
+        </div>
+
+        <!-- Disabled custom radio buttons -->
+        <div>
+          <input type="radio" id="radioCustomDisabled1" name="radioCustomDisabled" value="optionOne">
+          <label for="radioCustomDisabled1">Custom radio 1</label>
+        </div>
+        <div>
+          <input type="radio" id="radioCustomDisabled2" name="radioCustomDisabled" value="optionTwo">
+          <label for="radioCustomDisabled2">Custom radio 2</label>
+        </div>
+
+        <!-- Inline custom checkboxes -->
+        <div>
+          <input type="checkbox" id="checkboxCustomInline1" value="customCheckbox1">
+          <label for="checkboxCustomInline1">Toggle this checkbox</label>
+        </div>
+        <div>
+          <input type="checkbox" id="checkboxCustomInline2" value="customCheckbox2">
+          <label for="checkboxCustomInline2">Or toggle this other checkbox</label>
+        </div>
+        <div>
+          <input type="checkbox" id="checkboxCustomInline3" value="customCheckbox3">
+          <label for="checkboxCustomInline3">Or toggle this other checkbox</label>
+        </div>
+
+        <br>
+
+        <!-- Inline custom radio buttons -->
+        <div>
+          <input type="radio" id="radioCustomInline1" name="radioCustomInline" value="optionOne">
+          <label for="radioCustomInline1">Toggle this custom radio</label>
+        </div>
+        <div>
+          <input type="radio" id="radioCustomInline2" name="radioCustomInline" value="optionTwo">
+          <label for="radioCustomInline2">Or toggle this other custom radio</label>
+        </div>
+        <div>
+          <input type="radio" id="radioCustomInline3" name="radioCustomInline" value="optionThree">
+          <label for="radioCustomInline3">Or toggle this other custom radio</label>
+        </div>
+
+        <!-- Custom select -->
+        <div>
+          <label for="example-select-custom">Custom select</label>
+          <select id="example-select-custom">
+            <option selected>Custom select</option>
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+            <option value="3">Option three</option>
+          </select>
+        </div>
+
+        <!-- Small custom select -->
+        <div>
+          <label for="example-select-custom">Custom select</label>
+          <select id="example-select-custom">
+            <option selected>Custom select</option>
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+            <option value="3">Option three</option>
+          </select>
+        </div>
+
+        <!-- Large custom select -->
+        <div>
+          <label for="example-select-custom">Custom select</label>
+          <select id="example-select-custom">
+            <option selected>Custom select</option>
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+            <option value="3">Option three</option>
+          </select>
+        </div>
+
+        <!-- Custom file browser -->
+        <div>
+          <div>
+            <input type="file" id="example-file-custom">
+            <label for="example-file-custom">Custom file browser</label>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

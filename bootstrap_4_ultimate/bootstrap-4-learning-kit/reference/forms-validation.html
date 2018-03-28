@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Bootstrap 4 Learning Kit - Reference - Components: Forms – Validation</title>
+
+    <style type="text/css">
+      #formValidationClientTooltips .form-group {
+        position: relative;
+      }
+    </style>
+
+  </head>
+  <body>
+    
+    <header>
+      <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="../index.html" class="navbar-brand">Bootstrap 4 Learning Kit</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layout</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="containers.html" class="dropdown-item">Containers</a>
+                  <a href="grid-system.html" class="dropdown-item">Grid system</a>
+                  <a href="media-object.html" class="dropdown-item">Media object</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="typography.html" class="dropdown-item">Typography</a>
+                  <a href="images.html" class="dropdown-item">Images</a>
+                  <a href="figures.html" class="dropdown-item">Figures</a>
+                  <a href="tables.html" class="dropdown-item">Tables</a>
+                  <a href="code.html" class="dropdown-item">Code</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="alerts.html" class="dropdown-item">Alerts</a>
+                  <a href="badges.html" class="dropdown-item">Badges</a>
+                  <a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+                  <a href="buttons.html" class="dropdown-item">Buttons</a>
+                  <a href="button-group.html" class="dropdown-item">Button group</a>
+                  <a href="card.html" class="dropdown-item">Card</a>
+                  <a href="carousel.html" class="dropdown-item">Carousel</a>
+                  <a href="collapse.html" class="dropdown-item">Collapse</a>
+                  <a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+                  <a href="forms-controls.html" class="dropdown-item">Forms – Controls</a>
+                  <a href="forms-layout.html" class="dropdown-item">Forms – Layout</a>
+                  <a href="forms-validation.html" class="dropdown-item active">Forms – Validation</a>
+                  <a href="input-group.html" class="dropdown-item">Input group</a>
+                  <a href="jumbotron.html" class="dropdown-item">Jumbotron</a>
+                  <a href="list-group.html" class="dropdown-item">List group</a>
+                  <a href="modal.html" class="dropdown-item">Modal</a>
+                  <a href="navs.html" class="dropdown-item">Navs</a>
+                  <a href="navbar.html" class="dropdown-item">Navbar</a>
+                  <a href="pagination.html" class="dropdown-item">Pagination</a>
+                  <a href="popovers.html" class="dropdown-item">Popovers</a>
+                  <a href="progress.html" class="dropdown-item">Progress</a>
+                  <a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+                  <a href="tooltips.html" class="dropdown-item">Tooltips</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilities</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="borders.html" class="dropdown-item">Borders</a>
+                  <a href="clearfix.html" class="dropdown-item">Clearfix</a>
+                  <a href="close-icon.html" class="dropdown-item">Close icon</a>
+                  <a href="colors.html" class="dropdown-item">Colors</a>
+                  <a href="display.html" class="dropdown-item">Display</a>
+                  <a href="embed.html" class="dropdown-item">Embed</a>
+                  <a href="flex.html" class="dropdown-item">Flex</a>
+                  <a href="float.html" class="dropdown-item">Float</a>
+                  <a href="image-replacement.html" class="dropdown-item">Image replacement</a>
+                  <a href="position.html" class="dropdown-item">Position</a>
+                  <a href="screen-readers.html" class="dropdown-item">Screen readers</a>
+                  <a href="sizing.html" class="dropdown-item">Sizing</a>
+                  <a href="spacing.html" class="dropdown-item">Spacing</a>
+                  <a href="text.html" class="dropdown-item">Text</a>
+                  <a href="vertical-align.html" class="dropdown-item">Vertical align</a>
+                  <a href="visibility.html" class="dropdown-item">Visibility</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="photo-gallery.html" class="dropdown-item">Photo gallery</a>
+                  <a href="video-gallery.html" class="dropdown-item">Video gallery</a>
+                  <a href="mixed-gallery.html" class="dropdown-item">Mixed gallery</a>
+                  <a href="audio-gallery.html" class="dropdown-item">Audio gallery</a>
+                  <a href="login.html" class="dropdown-item">Login</a>
+                  <a href="contact.html" class="dropdown-item">Contact</a>
+                  <a href="footer.html" class="dropdown-item">Footer</a>
+                  <a href="sitemap.html" class="dropdown-item">Sitemap</a>
+                  <a href="shortcuts.html" class="dropdown-item">Shortcuts</a>
+                  <a href="faq.html" class="dropdown-item">FAQ</a>
+                  <a href="thank-you.html" class="dropdown-item">Thank you</a>
+                  <a href="employees.html" class="dropdown-item">Employees</a>
+                  <a href="pricing-table.html" class="dropdown-item">Pricing table</a>
+                  <a href="create-account.html" class="dropdown-item">Create account</a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Toggle section">
+              <a href="../reference/forms-validation.html" class="btn btn-dark">Reference</a>
+              <a href="../practice/forms-validation.html" class="btn btn-secondary">Practice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="display-4">Components: Forms – Validation</h1>
+      <hr>
+      <main>
+        
+        <!-- Default browser form validation -->
+        <form id="formValidationDefault">
+          <div class="form-group">
+            <label for="validationDefaultText">Text input</label>
+            <input type="text" class="form-control" id="validationDefaultText" required>
+          </div>
+          <div class="form-group">
+            <label for="validationDefaultNumber">Number input</label>
+            <input type="number" class="form-control" id="validationDefaultNumber" required>
+          </div>
+          <div class="form-group">
+            <label for="validationDefaultTextarea">Textarea</label>
+            <textarea class="form-control" id="validationDefaultTextarea" rows="5" placeholder="Write your message here." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="validationDefaultSelect">Select one</label>
+            <select class="form-control" id="validationDefaultSelect" required>
+              <option value="">Select</option>
+              <option value="1">Option one</option>
+              <option value="2">Option two</option>
+              <option value="3">Option three</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit form</button>
+        </form>
+
+        <!-- Client side form validation with JavaScript -->
+        <form id="formValidationClient" class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="validationClientText">Text input</label>
+            <input type="text" class="form-control" id="validationClientText" required>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientNumber">Number input</label>
+            <input type="number" class="form-control" id="validationClientNumber" required>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientTextarea">Textarea</label>
+            <textarea class="form-control" id="validationClientTextarea" rows="5" placeholder="Write your message here." required></textarea>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientSelect">Select one</label>
+            <select class="form-control" id="validationClientSelect" required>
+              <option value="">Select</option>
+              <option value="1">Option one</option>
+              <option value="2">Option two</option>
+              <option value="3">Option three</option>
+            </select>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="validationClientCheckbox" value="optionOne" required>
+            <label class="form-check-label" for="validationClientCheckbox">Option one</label>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="validationClientRadios" id="validationClientRadios1" value="optionOne" required>
+            <label class="form-check-label" for="validationClientRadios1">Option one</label>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="validationClientRadios" id="validationClientRadios2" value="optionTwo" required>
+            <label class="form-check-label" for="validationClientRadios2">Option two</label>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="validationClientCheckboxCustom" value="customCheckbox" required>
+            <label class="custom-control-label" for="validationClientCheckboxCustom">Custom checkbox</label>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="validationClientRadioCustom1" name="validationClientRadioCustom" class="custom-control-input" value="optionOne" required>
+            <label class="custom-control-label" for="validationClientRadioCustom1">Custom radio 1</label>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="validationClientRadioCustom2" name="validationClientRadioCustom" class="custom-control-input" value="optionTwo" required>
+            <label class="custom-control-label" for="validationClientRadioCustom2">Custom radio 2</label>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientSelectCustom" class="sr-only">Custom select</label>
+            <select class="form-control custom-select" id="validationClientSelectCustom" required>
+              <option value="">Custom select</option>
+              <option value="1">Option one</option>
+              <option value="2">Option two</option>
+              <option value="3">Option three</option>
+            </select>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" id="validationClientFileCustom" class="custom-file-input" required>
+              <label class="custom-file-label" for="validationClientFileCustom">Custom file browser</label>
+              <p class="valid-feedback">Valid feedback text</p>
+              <p class="invalid-feedback">Invalid feedback text</p>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit form</button>
+        </form>
+
+        <!-- Client side form validation with tooltips -->
+        <form id="formValidationClientTooltips" class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="validationClientText">Text input</label>
+            <input type="text" class="form-control" id="validationClientText" required>
+            <p class="valid-tooltip">Valid feedback tooltip</p>
+            <p class="invalid-tooltip">Invalid feedback tooltip</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientNumber">Number input</label>
+            <input type="number" class="form-control" id="validationClientNumber" required>
+            <p class="valid-tooltip">Valid feedback tooltip</p>
+            <p class="invalid-tooltip">Invalid feedback tooltip</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientTextarea">Textarea</label>
+            <textarea class="form-control" id="validationClientTextarea" rows="5" placeholder="Write your message here." required></textarea>
+            <p class="valid-tooltip">Valid feedback tooltip</p>
+            <p class="invalid-tooltip">Invalid feedback tooltip</p>
+          </div>
+          <div class="form-group">
+            <label for="validationClientSelect">Select one</label>
+            <select class="form-control" id="validationClientSelect" required>
+              <option value="">Select</option>
+              <option value="1">Option one</option>
+              <option value="2">Option two</option>
+              <option value="3">Option three</option>
+            </select>
+            <p class="valid-tooltip">Valid feedback tooltip</p>
+            <p class="invalid-tooltip">Invalid feedback tooltip</p>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit form</button>
+        </form>
+        
+        <!-- Server side form validation -->
+        <form id="formValidationServer">
+          <div class="form-group">
+            <label for="validationServerText">Text input</label>
+            <input type="text" class="form-control is-valid" id="validationServerText">
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationServerNumber">Number input</label>
+            <input type="number" class="form-control is-invalid" id="validationServerNumber">
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationServerTextarea">Textarea</label>
+            <textarea class="form-control is-valid" id="validationServerTextarea" rows="5" placeholder="Write your message here."></textarea>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <div class="form-group">
+            <label for="validationServerSelect">Select one</label>
+            <select class="form-control is-invalid" id="validationServerSelect">
+              <option value="">Select</option>
+              <option value="1">Option one</option>
+              <option value="2">Option two</option>
+              <option value="3">Option three</option>
+            </select>
+            <p class="valid-feedback">Valid feedback text</p>
+            <p class="invalid-feedback">Invalid feedback text</p>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit form</button>
+        </form>
+
+      </main>
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>

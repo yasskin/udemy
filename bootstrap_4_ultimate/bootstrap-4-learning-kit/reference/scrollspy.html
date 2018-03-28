@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <title>Bootstrap 4 Learning Kit - Reference - Components: Scrollspy</title>
+
+    <!-- Styling to better show these examples -->
+    <style type="text/css">
+      body {
+        position: relative;
+        padding-top: 42px;
+      }
+    </style>
+  </head>
+  <!-- Data attributes that initializes a scrollspy on a page -->
+  <body data-spy="scroll" data-target="#navScrollspy">
+    
+    <header>
+      <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a href="../index.html" class="navbar-brand">Bootstrap 4 Learning Kit</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layout</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="containers.html" class="dropdown-item">Containers</a>
+                  <a href="grid-system.html" class="dropdown-item">Grid system</a>
+                  <a href="media-object.html" class="dropdown-item">Media object</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="typography.html" class="dropdown-item">Typography</a>
+                  <a href="images.html" class="dropdown-item">Images</a>
+                  <a href="figures.html" class="dropdown-item">Figures</a>
+                  <a href="tables.html" class="dropdown-item">Tables</a>
+                  <a href="code.html" class="dropdown-item">Code</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="alerts.html" class="dropdown-item">Alerts</a>
+                  <a href="badges.html" class="dropdown-item">Badges</a>
+                  <a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+                  <a href="buttons.html" class="dropdown-item">Buttons</a>
+                  <a href="button-group.html" class="dropdown-item">Button group</a>
+                  <a href="card.html" class="dropdown-item">Card</a>
+                  <a href="carousel.html" class="dropdown-item">Carousel</a>
+                  <a href="collapse.html" class="dropdown-item">Collapse</a>
+                  <a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+                  <a href="forms-controls.html" class="dropdown-item">Forms – Controls</a>
+                  <a href="forms-layout.html" class="dropdown-item">Forms – Layout</a>
+                  <a href="forms-validation.html" class="dropdown-item">Forms – Validation</a>
+                  <a href="input-group.html" class="dropdown-item">Input group</a>
+                  <a href="jumbotron.html" class="dropdown-item">Jumbotron</a>
+                  <a href="list-group.html" class="dropdown-item">List group</a>
+                  <a href="modal.html" class="dropdown-item">Modal</a>
+                  <a href="navs.html" class="dropdown-item">Navs</a>
+                  <a href="navbar.html" class="dropdown-item">Navbar</a>
+                  <a href="pagination.html" class="dropdown-item">Pagination</a>
+                  <a href="popovers.html" class="dropdown-item">Popovers</a>
+                  <a href="progress.html" class="dropdown-item">Progress</a>
+                  <a href="scrollspy.html" class="dropdown-item active">Scrollspy</a>
+                  <a href="tooltips.html" class="dropdown-item">Tooltips</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utilities</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="borders.html" class="dropdown-item">Borders</a>
+                  <a href="clearfix.html" class="dropdown-item">Clearfix</a>
+                  <a href="close-icon.html" class="dropdown-item">Close icon</a>
+                  <a href="colors.html" class="dropdown-item">Colors</a>
+                  <a href="display.html" class="dropdown-item">Display</a>
+                  <a href="embed.html" class="dropdown-item">Embed</a>
+                  <a href="flex.html" class="dropdown-item">Flex</a>
+                  <a href="float.html" class="dropdown-item">Float</a>
+                  <a href="image-replacement.html" class="dropdown-item">Image replacement</a>
+                  <a href="position.html" class="dropdown-item">Position</a>
+                  <a href="screen-readers.html" class="dropdown-item">Screen readers</a>
+                  <a href="sizing.html" class="dropdown-item">Sizing</a>
+                  <a href="spacing.html" class="dropdown-item">Spacing</a>
+                  <a href="text.html" class="dropdown-item">Text</a>
+                  <a href="vertical-align.html" class="dropdown-item">Vertical align</a>
+                  <a href="visibility.html" class="dropdown-item">Visibility</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="photo-gallery.html" class="dropdown-item">Photo gallery</a>
+                  <a href="video-gallery.html" class="dropdown-item">Video gallery</a>
+                  <a href="mixed-gallery.html" class="dropdown-item">Mixed gallery</a>
+                  <a href="audio-gallery.html" class="dropdown-item">Audio gallery</a>
+                  <a href="login.html" class="dropdown-item">Login</a>
+                  <a href="contact.html" class="dropdown-item">Contact</a>
+                  <a href="footer.html" class="dropdown-item">Footer</a>
+                  <a href="sitemap.html" class="dropdown-item">Sitemap</a>
+                  <a href="shortcuts.html" class="dropdown-item">Shortcuts</a>
+                  <a href="faq.html" class="dropdown-item">FAQ</a>
+                  <a href="thank-you.html" class="dropdown-item">Thank you</a>
+                  <a href="employees.html" class="dropdown-item">Employees</a>
+                  <a href="pricing-table.html" class="dropdown-item">Pricing table</a>
+                  <a href="create-account.html" class="dropdown-item">Create account</a>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Toggle section">
+              <a href="../reference/scrollspy.html" class="btn btn-dark">Reference</a>
+              <a href="../practice/scrollspy.html" class="btn btn-secondary">Practice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="display-4">Components: Scrollspy</h1>
+      <hr>
+      <main>
+
+        <!-- Scrollspy -->
+        <ul class="nav nav-tabs fixed-top" id="navScrollspy">
+          <li class="nav-item">
+            <a href="#sectionFirst" class="nav-link">First section</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sectionSecond" class="nav-link">Second section</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sectionThird" class="nav-link">Third section</a>
+          </li>
+        </ul>
+        <div id="sectionFirst">
+          <h2>First section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit pharetra elit, aliquet aliquet erat mollis eu. Praesent eu condimentum erat. In hac habitasse platea dictumst. Aenean maximus rhoncus nunc. Nullam lacus lacus, ullamcorper nec orci vel, mattis egestas mauris. Aliquam dignissim bibendum orci ac aliquam. Pellentesque porta tortor eu sodales volutpat. Etiam fermentum commodo nulla non euismod. In in elementum eros. Etiam odio felis, maximus rutrum sapien id, malesuada dignissim massa. In non sagittis enim. Pellentesque molestie tempus leo vitae blandit. Nunc et libero vitae nunc tempor cursus. Duis ex ipsum, pretium egestas metus eget, porttitor ultrices enim. Integer pulvinar a nisl id auctor. Suspendisse faucibus nisi at dictum faucibus.</p>
+          <p>Vivamus ultricies magna vel risus rhoncus blandit. Ut faucibus suscipit vehicula. Nunc maximus mollis cursus. In pulvinar ornare tellus, sed ullamcorper turpis lobortis vitae. Praesent interdum faucibus nibh, nec gravida est finibus et. Quisque ac volutpat enim, at fermentum quam. Nam eu sodales magna, ut congue risus. Maecenas sit amet justo id massa mollis fringilla quis et eros. Duis ultricies vestibulum cursus. Curabitur aliquet mauris tortor, ac malesuada velit lobortis eu. Etiam eget condimentum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor aliquam ornare. Duis a suscipit ante.</p>
+          <p>In venenatis ornare massa vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales erat vel laoreet auctor. Sed vulputate facilisis efficitur. Nunc et congue purus. Maecenas tempus felis sit amet convallis interdum. Integer sollicitudin justo vitae sollicitudin blandit. Donec felis libero, imperdiet semper commodo in, porta sed erat. Morbi condimentum et dolor at hendrerit. Aenean pellentesque pellentesque turpis vitae congue. Sed sed ultricies nisi. Ut ut pellentesque massa. Vivamus at convallis mi, sit amet ornare arcu. Curabitur libero purus, finibus eu laoreet in, blandit in velit. Donec gravida quam nec urna tincidunt, vel tempus ante placerat. Vestibulum dignissim congue gravida.</p>
+          <p>Morbi sit amet ultricies felis, et molestie ex. Aenean justo odio, auctor sed auctor in, tristique eu justo. Vivamus eget aliquet dui. Praesent tristique eros a pellentesque luctus. Praesent ac metus non ex imperdiet egestas at nec nisi. Sed elementum nulla risus, in egestas massa pharetra id. Pellentesque iaculis vestibulum imperdiet.</p>
+          <p>Nam in gravida quam. Praesent eget massa a diam laoreet posuere sed vel magna. Etiam semper leo dolor, ut molestie turpis lacinia sit amet. In quis luctus orci, id iaculis lectus. In vitae dignissim metus, a facilisis leo. Suspendisse hendrerit tempus diam, at mattis nibh. Cras bibendum, neque sed efficitur gravida, nunc neque viverra nibh, eu varius risus nisi ac mauris. Suspendisse elementum sodales fermentum. Proin varius nulla at nulla condimentum sollicitudin vehicula eget justo. Etiam ultrices neque sed tortor luctus, eu ultrices purus auctor. Nulla eget nisl mi.</p>
+        </div>
+        <div id="sectionSecond">
+          <h2>Second section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit pharetra elit, aliquet aliquet erat mollis eu. Praesent eu condimentum erat. In hac habitasse platea dictumst. Aenean maximus rhoncus nunc. Nullam lacus lacus, ullamcorper nec orci vel, mattis egestas mauris. Aliquam dignissim bibendum orci ac aliquam. Pellentesque porta tortor eu sodales volutpat. Etiam fermentum commodo nulla non euismod. In in elementum eros. Etiam odio felis, maximus rutrum sapien id, malesuada dignissim massa. In non sagittis enim. Pellentesque molestie tempus leo vitae blandit. Nunc et libero vitae nunc tempor cursus. Duis ex ipsum, pretium egestas metus eget, porttitor ultrices enim. Integer pulvinar a nisl id auctor. Suspendisse faucibus nisi at dictum faucibus.</p>
+          <p>Vivamus ultricies magna vel risus rhoncus blandit. Ut faucibus suscipit vehicula. Nunc maximus mollis cursus. In pulvinar ornare tellus, sed ullamcorper turpis lobortis vitae. Praesent interdum faucibus nibh, nec gravida est finibus et. Quisque ac volutpat enim, at fermentum quam. Nam eu sodales magna, ut congue risus. Maecenas sit amet justo id massa mollis fringilla quis et eros. Duis ultricies vestibulum cursus. Curabitur aliquet mauris tortor, ac malesuada velit lobortis eu. Etiam eget condimentum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor aliquam ornare. Duis a suscipit ante.</p>
+          <p>In venenatis ornare massa vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales erat vel laoreet auctor. Sed vulputate facilisis efficitur. Nunc et congue purus. Maecenas tempus felis sit amet convallis interdum. Integer sollicitudin justo vitae sollicitudin blandit. Donec felis libero, imperdiet semper commodo in, porta sed erat. Morbi condimentum et dolor at hendrerit. Aenean pellentesque pellentesque turpis vitae congue. Sed sed ultricies nisi. Ut ut pellentesque massa. Vivamus at convallis mi, sit amet ornare arcu. Curabitur libero purus, finibus eu laoreet in, blandit in velit. Donec gravida quam nec urna tincidunt, vel tempus ante placerat. Vestibulum dignissim congue gravida.</p>
+          <p>Morbi sit amet ultricies felis, et molestie ex. Aenean justo odio, auctor sed auctor in, tristique eu justo. Vivamus eget aliquet dui. Praesent tristique eros a pellentesque luctus. Praesent ac metus non ex imperdiet egestas at nec nisi. Sed elementum nulla risus, in egestas massa pharetra id. Pellentesque iaculis vestibulum imperdiet.</p>
+          <p>Nam in gravida quam. Praesent eget massa a diam laoreet posuere sed vel magna. Etiam semper leo dolor, ut molestie turpis lacinia sit amet. In quis luctus orci, id iaculis lectus. In vitae dignissim metus, a facilisis leo. Suspendisse hendrerit tempus diam, at mattis nibh. Cras bibendum, neque sed efficitur gravida, nunc neque viverra nibh, eu varius risus nisi ac mauris. Suspendisse elementum sodales fermentum. Proin varius nulla at nulla condimentum sollicitudin vehicula eget justo. Etiam ultrices neque sed tortor luctus, eu ultrices purus auctor. Nulla eget nisl mi.</p>
+        </div>
+        <div id="sectionThird">
+          <h2>Third section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit pharetra elit, aliquet aliquet erat mollis eu. Praesent eu condimentum erat. In hac habitasse platea dictumst. Aenean maximus rhoncus nunc. Nullam lacus lacus, ullamcorper nec orci vel, mattis egestas mauris. Aliquam dignissim bibendum orci ac aliquam. Pellentesque porta tortor eu sodales volutpat. Etiam fermentum commodo nulla non euismod. In in elementum eros. Etiam odio felis, maximus rutrum sapien id, malesuada dignissim massa. In non sagittis enim. Pellentesque molestie tempus leo vitae blandit. Nunc et libero vitae nunc tempor cursus. Duis ex ipsum, pretium egestas metus eget, porttitor ultrices enim. Integer pulvinar a nisl id auctor. Suspendisse faucibus nisi at dictum faucibus.</p>
+          <p>Vivamus ultricies magna vel risus rhoncus blandit. Ut faucibus suscipit vehicula. Nunc maximus mollis cursus. In pulvinar ornare tellus, sed ullamcorper turpis lobortis vitae. Praesent interdum faucibus nibh, nec gravida est finibus et. Quisque ac volutpat enim, at fermentum quam. Nam eu sodales magna, ut congue risus. Maecenas sit amet justo id massa mollis fringilla quis et eros. Duis ultricies vestibulum cursus. Curabitur aliquet mauris tortor, ac malesuada velit lobortis eu. Etiam eget condimentum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor aliquam ornare. Duis a suscipit ante.</p>
+          <p>In venenatis ornare massa vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales erat vel laoreet auctor. Sed vulputate facilisis efficitur. Nunc et congue purus. Maecenas tempus felis sit amet convallis interdum. Integer sollicitudin justo vitae sollicitudin blandit. Donec felis libero, imperdiet semper commodo in, porta sed erat. Morbi condimentum et dolor at hendrerit. Aenean pellentesque pellentesque turpis vitae congue. Sed sed ultricies nisi. Ut ut pellentesque massa. Vivamus at convallis mi, sit amet ornare arcu. Curabitur libero purus, finibus eu laoreet in, blandit in velit. Donec gravida quam nec urna tincidunt, vel tempus ante placerat. Vestibulum dignissim congue gravida.</p>
+          <p>Morbi sit amet ultricies felis, et molestie ex. Aenean justo odio, auctor sed auctor in, tristique eu justo. Vivamus eget aliquet dui. Praesent tristique eros a pellentesque luctus. Praesent ac metus non ex imperdiet egestas at nec nisi. Sed elementum nulla risus, in egestas massa pharetra id. Pellentesque iaculis vestibulum imperdiet.</p>
+          <p>Nam in gravida quam. Praesent eget massa a diam laoreet posuere sed vel magna. Etiam semper leo dolor, ut molestie turpis lacinia sit amet. In quis luctus orci, id iaculis lectus. In vitae dignissim metus, a facilisis leo. Suspendisse hendrerit tempus diam, at mattis nibh. Cras bibendum, neque sed efficitur gravida, nunc neque viverra nibh, eu varius risus nisi ac mauris. Suspendisse elementum sodales fermentum. Proin varius nulla at nulla condimentum sollicitudin vehicula eget justo. Etiam ultrices neque sed tortor luctus, eu ultrices purus auctor. Nulla eget nisl mi.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit pharetra elit, aliquet aliquet erat mollis eu. Praesent eu condimentum erat. In hac habitasse platea dictumst. Aenean maximus rhoncus nunc. Nullam lacus lacus, ullamcorper nec orci vel, mattis egestas mauris. Aliquam dignissim bibendum orci ac aliquam. Pellentesque porta tortor eu sodales volutpat. Etiam fermentum commodo nulla non euismod. In in elementum eros. Etiam odio felis, maximus rutrum sapien id, malesuada dignissim massa. In non sagittis enim. Pellentesque molestie tempus leo vitae blandit. Nunc et libero vitae nunc tempor cursus. Duis ex ipsum, pretium egestas metus eget, porttitor ultrices enim. Integer pulvinar a nisl id auctor. Suspendisse faucibus nisi at dictum faucibus.</p>
+          <p>Vivamus ultricies magna vel risus rhoncus blandit. Ut faucibus suscipit vehicula. Nunc maximus mollis cursus. In pulvinar ornare tellus, sed ullamcorper turpis lobortis vitae. Praesent interdum faucibus nibh, nec gravida est finibus et. Quisque ac volutpat enim, at fermentum quam. Nam eu sodales magna, ut congue risus. Maecenas sit amet justo id massa mollis fringilla quis et eros. Duis ultricies vestibulum cursus. Curabitur aliquet mauris tortor, ac malesuada velit lobortis eu. Etiam eget condimentum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor aliquam ornare. Duis a suscipit ante.</p>
+          <p>In venenatis ornare massa vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales erat vel laoreet auctor. Sed vulputate facilisis efficitur. Nunc et congue purus. Maecenas tempus felis sit amet convallis interdum. Integer sollicitudin justo vitae sollicitudin blandit. Donec felis libero, imperdiet semper commodo in, porta sed erat. Morbi condimentum et dolor at hendrerit. Aenean pellentesque pellentesque turpis vitae congue. Sed sed ultricies nisi. Ut ut pellentesque massa. Vivamus at convallis mi, sit amet ornare arcu. Curabitur libero purus, finibus eu laoreet in, blandit in velit. Donec gravida quam nec urna tincidunt, vel tempus ante placerat. Vestibulum dignissim congue gravida.</p>
+          <p>Morbi sit amet ultricies felis, et molestie ex. Aenean justo odio, auctor sed auctor in, tristique eu justo. Vivamus eget aliquet dui. Praesent tristique eros a pellentesque luctus. Praesent ac metus non ex imperdiet egestas at nec nisi. Sed elementum nulla risus, in egestas massa pharetra id. Pellentesque iaculis vestibulum imperdiet.</p>
+          <p>Nam in gravida quam. Praesent eget massa a diam laoreet posuere sed vel magna. Etiam semper leo dolor, ut molestie turpis lacinia sit amet. In quis luctus orci, id iaculis lectus. In vitae dignissim metus, a facilisis leo. Suspendisse hendrerit tempus diam, at mattis nibh. Cras bibendum, neque sed efficitur gravida, nunc neque viverra nibh, eu varius risus nisi ac mauris. Suspendisse elementum sodales fermentum. Proin varius nulla at nulla condimentum sollicitudin vehicula eget justo. Etiam ultrices neque sed tortor luctus, eu ultrices purus auctor. Nulla eget nisl mi.</p>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script that initializes a scrollspy on a page -->
+    <!-- <script type="text/javascript">
+      $(function() {
+        $('body').scrollspy({
+          target: '#navScrollspy'
+        });
+      })
+    </script> -->
+  </body>
+</html>
