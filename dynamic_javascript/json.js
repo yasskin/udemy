@@ -1,0 +1,1 @@
+var myObj1 = '{"people":[{"firstName":"Mikey","lastName":"Smith","age":30},{"firstName":"John","lastName":"Jones","age":40}],"places":[{"location":"Toronto","lat":87,"long":140},{"location":"New York","lat":77,"long":110}]}';

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <br>
+
+    <form name="TestForm" action="index.html" method="post">
+      First: <input type="text" name="fname" id="fname" value="Mike"><br>
+      Last: <input type="text" name="lname" id="lname" value="Smith"><br>
+      Age: <input type="text" name="age" id="age" value="85"><br>
+      <input type="button" name="" value="SEND via AJAX" onclick="postData()">
+
+    </form>
+
+    <div id="output1" class="">People List</div>
+    <br>
+    <div id="output2" class=""></div>
+
+    <!-- <script src="json.js" type="text/javascript"> -->
+
+    </script>
+
+    <script type="text/javascript">
+
+      var output1 = document.getElementById('output1'); var output2 =
+      document.getElementById('output2');
+
+      function postData() {
+
+      var firstName = document.getElementById("fname").value;
+      var lastName = document.getElementById("lname").value;
+      var age = document.getElementById("age").value;
+
+      var vars = "fname=" + firstName + "&lname="+lastName +"&age=" + age;
+        console.log(vars);
+
+      var hr = new XMLHttpRequest(); var url = "test.php";
+      // var url = "https://api.myjson.com/bins/z7ep6";
+
+      hr.onreadystatechange = function() {
+          if(this.readyState == 4 && this.status == 200) { var myObj =
+          JSON.parse();
+          console.log(hr.responseText);
+          // console.log(myObj);
+          // output1.innerHTML = myObj.people[0].firstName;
+          // output2.innerHTML = myObj.people[1].firstName;
+          }
+        }
+      hr.open("GET", url, true);
+      hr.send(vars);
+    }
+
+      // var myObj1 = '{"people":[{"firstName":"Mike","lastName":"Smith","age":30},{"firstName":"John","lastName":"Jones","age":40}],"places":[{"location":"Toronto","lat":87,"long":140},{"location":"New York","lat":77,"long":110}]}';
+
+      // myObj = JSON.parse(myObj1);
+      //
+      // console.log(myObj1);
+      //
+      // for (var i = 0; i < myObj.people.length; i++) {
+      //   output1.innerHTML += "<br>"+myObj.people[i].firstName + " " + myObj.people[i].lastName;
+      // }
+      //
+      // for (var i = 0; i < myObj.places.length; i++) {
+      //   output2.innerHTML += "<br>"+myObj.places[i].location + " (" + myObj.places[i].lat + ", " + myObj.places[i].long + ")";
+      // }
+
+      // var name = "Name";
+      //
+      // var i = 0;
+      //
+      // output1.innerHTML = myObj.people[i].firstName;
+      // output2.innerHTML = myObj.people[i]['last' + name];
+      //
+      // var i = 1;
+      //
+      // output1.innerHTML += myObj.people[i].firstName;
+      // output2.innerHTML += myObj.people[i]['last' + name];
+
+    </script>
+
+  </body>
+</html>
