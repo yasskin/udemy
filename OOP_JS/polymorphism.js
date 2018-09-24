@@ -1,6 +1,6 @@
-
-function HtmlElement() { 
-  this.click = function() { 
+// parent object
+function HtmlElement() {
+  this.click = function() {
     console.log('clicked');
   }
 }
@@ -9,10 +9,11 @@ HtmlElement.prototype.focus = function(){
   console.log('focued');
 }
 
-function HtmlSelectElement(items = []) { 
+//
+function HtmlSelectElement(items = []) {
   this.items = items;
-  
-  this.addItem = function(item) { 
+
+  this.addItem = function(item) {
     this.items.push(item);
   }
 
@@ -25,19 +26,19 @@ function HtmlSelectElement(items = []) {
 <select>${this.items.map(item => `
   <option>${item}</option>`).join('')}
 </select>`;
-  }  
+  }
 }
-HtmlSelectElement.prototype = new HtmlElement(); 
+HtmlSelectElement.prototype = new HtmlElement();
 HtmlSelectElement.prototype.constructor = HtmlSelectElement;
 
-function HtmlImageElement(src) { 
-  this.src = src; 
-  
+function HtmlImageElement(src) {
+  this.src = src;
+
   this.render = function() {
     return `<img src="${this.src}" />`
   }
 }
-HtmlImageElement.prototype = new HtmlElement(); 
+HtmlImageElement.prototype = new HtmlElement();
 HtmlImageElement.prototype.constructor = HtmlImageElement;
 
 const elements = [
@@ -45,5 +46,5 @@ const elements = [
   new HtmlImageElement('http://')
 ];
 
-for (let element of elements) 
+for (let element of elements)
   console.log(element.render());
