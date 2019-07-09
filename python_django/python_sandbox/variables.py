@@ -13,3 +13,25 @@ VARIABLE RULES:
   - Must start with a letter or an underscore
   - Can have numbers but can not start with one
 """
+
+x = 1           # int
+y = 2.8         # float
+name = 'Noah'   # string
+is_cool = True  # bool - must start with a capital
+
+# Multiple assignment
+x, y, name, is_cool = (1, 2.5, 'Noah', True)
+
+print(x, y, name, is_cool)
+
+# Basic math
+a = x + y
+
+# Casting
+x = str(x)
+y = int(y)
+z = float(y)
+
+# Check type
+print(type(z))
+print(z)
