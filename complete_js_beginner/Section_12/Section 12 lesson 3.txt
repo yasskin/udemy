@@ -1,0 +1,44 @@
+https://developers.google.com/maps/documentation/javascript/get-api-key
+
+https://maps.googleapis.com/maps/api/js?key=
+
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script>
+    
+        window.onload = init;
+        var m = document.getElementById('map');
+
+        function init() {
+            navigator.geolocation.getCurrentPosition(placeMap);
+        }
+
+        function placeMap(data) {
+            var options = {
+                center: {
+                    lat: data.coords.latitude
+                    , lng: data.coords.longitude
+                }
+                , zoom: 5
+            }
+            var map = new google.maps.Map(m, options);
+            console.dir(data);
+        }
+    </script>
+</body>
+
+</html>

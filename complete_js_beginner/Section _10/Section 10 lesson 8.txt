@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <script>
+        //var d = new Date();
+        //var d = new Date("2010-01-10CDT13:00:55");
+        var d = new Date("APRIL,10, 1980");
+        var t = d.getTime();
+        d.setFullYear(2017);
+        d.setDate(d.getDate() + 100);
+        //d.setMonth(11);
+        message.innerHTML += '<br>' + d + '<br>' + t;
+    </script>
+</body>
+
+</html>

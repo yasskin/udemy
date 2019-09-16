@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        var message = "hello world";
+        if (localStorage.getItem('test1')) {
+            document.getElementById('output').innerHTML = localStorage.getItem('test1');
+        }
+        if (localStorage.getItem('count')) {
+            var cnt = Number(localStorage.getItem('count')) + 1;
+            localStorage.setItem('count', cnt);
+            document.getElementById('output').innerHTML += cnt;
+        }
+        else {
+            localStorage.setItem('count', 1);
+        }
+    </script>
+</body>
+
+</html>

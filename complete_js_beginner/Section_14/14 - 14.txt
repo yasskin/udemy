@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        let myArr = [2, 5, 7, 4, 7, 89, 5, 32, 5, 23, 3, 2, 23, 55];
+        var a = myArr.find(function (x) {
+            return x > 50;
+        })
+        let b = myArr.find(x => x > 50);
+        console.log(b);
+        let c = myArr.findIndex(x => x > 50);
+        console.log(c);
+        console.log(myArr[myArr.findIndex(x => x > 50)]);
+
+        function makeArray() {
+            return Array.from(arguments);
+        }
+        let d = makeArray("test", "test2", "tet3");
+        console.log(d);
+        console.log(d.findIndex(a => a == "test2"));
+    </script>
+</body>
+
+</html>

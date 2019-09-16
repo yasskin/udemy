@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var animals = ["cat","dog","rabbit","bird","fish"];
+        var randomIndex = Math.floor(Math.random()*animals.length);
+        var randomAnimal = animals[randomIndex];
+        var message = prompt("which index value is "+randomAnimal );
+        var response = (message == randomIndex) ? "Correct" : "Wrong it was " +  randomIndex;
+        alert(response);
+        
+    </script>
+</body>
+
+</html>

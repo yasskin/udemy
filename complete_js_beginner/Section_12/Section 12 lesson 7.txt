@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .item {
+            border: 1px solid black;
+            padding: 2%;
+            width: 29%;
+            float: left;
+            height: 300px;
+        }
+        
+        .img-fluid {
+            max-width: 100%;
+        }
+        
+        .productItem {
+            border: 1px solid black;
+            text-decoration: none;
+            background-color: green;
+            color: azure;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        var items = [{
+            name: 'iPhone'
+            , details: 'White'
+            , cost: 500
+        }, {
+            name: 'iPad'
+            , details: 'White'
+            , cost: 800
+        }, {
+            name: 'Cable'
+            , details: '3 foot'
+            , cost: 10
+        }, {
+            name: 'Camera'
+            , details: '25MP'
+            , cost: 300
+        }, {
+            name: 'Laptop'
+            , details: 'Intel i7'
+            , cost: 1200
+        }, {
+            name: 'LCD Monitor'
+            , details: '24 inch'
+            , cost: 200
+        }, {
+            name: 'TV'
+            , details: '50 inch'
+            , cost: 450
+        }];
+        var html = '<br>';
+        window.onload = init;
+
+        function init() {
+            buildItems();
+            var q = document.querySelectorAll('.productItem');
+            for (var x = 0; x < q.length; x++) {
+                q[x].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    addToCart();
+                })
+            }
+        }
+
+        function addToCart() {
+            console.log(event.target.dataset);
+        }
+
+        function buildItems() {
+            var x = 0;
+            items.forEach(function (v) {
+                html += '<div class="item"><h3>' + v.name + '</h3><img src="http://placehold.it/350x150" class="img-fluid"><div>' + v.details + ' <a href="#" class="productItem" data-name="' + v.name + '" data-s="' + v.details + '"  data-price="' + v.cost + '" data-id="' + x + '" >Add to Cart</a></div></div>';
+                x++;
+                console.log(v);
+            })
+            document.getElementById('output').innerHTML += html;
+        }
+    </script>
+</body>
+
+</html>
+</html>

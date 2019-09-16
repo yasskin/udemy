@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" value="Add Friend"> </div>
+    <div id="output"></div>
+    <script>
+        window.onload = build;
+        var myArray = ["Laurence", "Mike", "John", "Larry"];
+        var message = document.getElementById('message');
+        var addNew = document.getElementById('addNew');
+        addNew.onclick = function () {
+            var q = document.getElementById('addFriend').value;
+            var tr = document.createElement('tr');
+            tr.setAttribute('data-row', myArray.length);
+            tr.setAttribute('data-vote', 0);
+            tr.innerHTML = '<td class="box">' + (myArray.length + 1) + '</td><td>' + q + '</td><td>0</td>';
+            var container = document.querySelector('#output table tbody');
+            container.appendChild(tr);
+            myArray.push(q);
+            voteCount();
+        }
+
+        function build() {
+            var html = "<h1>My Friends Table</h1><table>";
+            for (var x = 0; x < myArray.length; x++) {
+                html += '<tr data-row="' + x + '" data-vote="0"><td class="box" >' + (x + 1) + '</td><td>' + myArray[x] + '</td><td>0</td></tr>';
+            }
+            html += '</table>';
+            document.getElementById('output').innerHTML = html;
+            voteCount();
+        }
+
+        function voteCount() {
+            var elbox = document.querySelectorAll('#output .box');
+            var a;
+            var v;
+            for (var x = 0; x < elbox.length; x++) {
+                elbox[x].onclick = function () {
+                    a = this.closest('[data-row]').getAttribute('data-row');
+                    message.innerHTML = myArray[a] + " is on row #" + a;
+                    v = this.closest('[data-vote]').getAttribute('data-vote');
+                    v++;
+                    this.parentElement.lastElementChild.innerText = v;
+                    this.parentElement.setAttribute("data-vote", v);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

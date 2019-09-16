@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Page 1</div> <a href="index3.html">Index3</a> <a href="index.html">Index</a> <a href="index2.html">Index2</a>
+    <input type="button" onclick="alert('hello world\'s:')" value="Alert">
+    <script>
+        var output = document.getElementById('wrapper');
+
+        function goBack() {
+            window.history.go(-1);
+        }
+    </script>
+</body>
+
+</html>

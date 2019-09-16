@@ -1,0 +1,31 @@
+Start
+        var mes0 = function mes0(value) {
+            var a = "Hello ";
+            console.log(a + value);
+        };
+        mes0('test');
+        var mes1 = function mes1(value) {
+            return "Hello " + value;
+        };
+        console.log(mes1('test'));
+        var mes2 = function mes2(value) {
+            var a = "Hello ";
+            console.log(a + value);
+        };
+        mes2('test');
+
+
+
+Solution
+
+    
+        let mes0 = (value) => {
+            var a = "Hello ";
+            console.log(a + value);
+        };
+        mes0('test 1');
+        let mes1 = value => "Hello " + value;
+        console.log(mes1('test 2'));
+        let mes2 = value => console.log("Hello " + value);
+        mes2('test 3');
+        

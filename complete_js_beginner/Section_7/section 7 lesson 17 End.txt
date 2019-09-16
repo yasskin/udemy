@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="start"></div> How many Players ?
+        <input type="number" id="players" min="1" max="5" value="3">
+        <button id="btnDeal" type="button" onClick="startDeal()">Deal</button>
+        <div id="message"></div>
+    </div>
+    <script>
+        var suits = ["spades", "hearts", "clubs", "diams"];
+        var cardFace = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+        var cards = [];
+        var players = [];
+
+        function startDeal() {
+            players = [];
+            cards = [];
+            var num = Number(document.getElementById("players").value);
+            for (i = 0; i < num; i++) {
+                players[i] = [];
+            }
+            buildCards();
+            shuffleArray(cards);
+            deal(cards);
+        }
+
+        function deal(c) {
+            var num = players.length;
+            var message = document.getElementById("message");
+            var p = 0;
+            for (var i = 0; i < c.length; i++) {
+                players[p].push(c[i]);
+                p++;
+                if (p >= num) {
+                    p = 0;
+                }
+            }
+            for (var x = 0; x < num; x++) {
+                message.innerHTML += "<BR>Player : " + (x + 1) + "<br>";
+                for (var i = 0; i < players[x].length; i++) {
+                    message.innerHTML += "<span style=\"color:" + players[x][i].bgColor + "\">" + players[x][i].num + "&" + players[x][i].suit + "; </span>";
+                }
+                message.innerHTML += "<BR>";
+            }
+        }
+
+        function buildCards() {
+            cards = [];
+            for (s in suits) {
+                var suitNew = suits[s][0].toUpperCase();
+                var bgColor = suitNew == "H" || suitNew == "D" ? "red" : "black";
+                for (n in cardFace) {
+                    var card = {
+                        suit: suits[s]
+                        , num: cardFace[n]
+                        , bgColor: bgColor
+                        , icon: suitNew
+                    }
+                    cards.push(card);
+                }
+            }
+        }
+
+        function shuffleArray(array) {
+            for (var x = array.length - 1; x > 0; x--) {
+                var ii = Math.floor(Math.random() * (x + 1));
+                var temp = array[x];
+                array[x] = array[ii];
+                array[ii] = temp;
+            }
+            return array;
+        }
+    </script>
+</body>
+
+</html>

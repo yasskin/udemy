@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            margin: 0 50px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+        
+        #getEle {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">Complete JavaScript Course</div>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">1
+        <div id="getEle" ondragstart="dStart()" draggable="true">Drag Me Please!</div>
+    </div>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">2</div>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">3</div>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">4</div>
+    <script>
+        var holderItem;
+
+        function dStart() {
+            message("drag started");
+            holderItem = event.target;
+        }
+
+        function nDrop() {
+            event.preventDefault();
+        }
+
+        function dDrop() {
+            event.preventDefault();
+            message("Drop It");
+            if (event.target.className == "box") {
+                event.target.appendChild(holderItem);
+            }
+        }
+
+        function message(m) {
+            document.getElementById('wrapper').innerHTML = m;
+        }
+    </script>
+</body>
+
+</html>

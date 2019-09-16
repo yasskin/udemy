@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .gameboard {
+            width: 600px;
+            height: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+        
+        .office {
+            float: left;
+            width: 120px;
+            height: 170px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ddd;
+            margin: 10px 30px;
+        }
+        
+        .desk {
+            width: 100%;
+            height: 50px;
+            bottom: 0px;
+            position: absolute;
+            background-color: burlywood;
+            z-index: 2;
+        }
+        
+        .computer {
+            background: url('comp.JPG') bottom center no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            height: 80%;
+            transition: all 0.5s;
+        }
+        
+        .popup {
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>Score:<span class="score">0</span>
+    <input type="button" onclick="start()" value="Start Game">
+    <div class="gameboard"></div>
+    <script>
+        window.onload = build;
+        var computer;
+        var offices = 9;
+        var timer;
+        var sCom;
+        var score = 0;
+        var cOff = true;
+
+        function build() {
+            var html = "<h1>Hit the computer</h1>";
+            for (var x = 0; x < offices; x++) {
+                html += '<div class="office"><div class="desk"></div><div class="computer"></div></div>';
+            }
+            document.querySelector('.gameboard').innerHTML = html;
+            computer = document.querySelectorAll('.computer');
+            for (var x = 0; x < computer.length; x++) {
+                computer[x].addEventListener('click', hitcomputer, false);
+            }
+        }
+
+        function popup() {
+            cOff = true;
+            sCom = computer[Math.floor(Math.random() * computer.length)];
+            sCom.classList.add('popup');
+            var rTime = (Math.floor(Math.random() * 10) * 100) + 500;
+            timer = setTimeout(hidecomputer, rTime);
+        }
+
+        function hidecomputer() {
+            sCom.classList.remove('popup');
+            popup();
+        }
+
+        function hitcomputer() {
+            event.target.classList.remove('popup');
+            if (cOff) {
+                cOff = false;
+                score++;
+                document.querySelector('.score').innerHTML = score;
+            }
+            popup();
+        }
+
+        function start() {
+            popup();
+        }
+    </script>
+</body>
+
+</html>

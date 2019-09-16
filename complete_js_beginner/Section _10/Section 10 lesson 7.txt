@@ -1,0 +1,35 @@
+Math.floor(m)
+Math.round(m)
+Math.ceil(m)
+Math.abs(-5.4444)
+Math.sqrt(100)
+Math.pow(10,2)
+
+
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <script>
+        var m = Math.PI;
+        var rNum = Math.ceil(Math.random() * 99);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

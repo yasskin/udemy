@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Page 1</div>
+    <form name="myForm">
+        <input type="button" id="id1" value="click 1">
+        <input type="button" id="id2" value="click 2">
+        <input type="button" id="id3" value="click 3"> </form>
+    <script>
+        var output = document.getElementById('wrapper');
+        document.getElementById('id1').onclick = myFun;
+
+        function myFun() {
+            console.dir(this);
+            this.value = "CLICKED";
+            output.innerHTML = "WORKED";
+        }
+    </script>
+</body>
+
+</html>

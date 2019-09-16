@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body> First :
+    <input type="text" id="num1"> Second :
+    <input type="text" id="num2">
+    <br>
+    <input type="button" onClick="addBy()" value="Add">
+    <input type="button" onClick="subBy()" value="Subtract">
+    <input type="button" onClick="mulBy()" value="Multiply">
+    <input type="button" onClick="divBy()" value="Divide">
+    <br>
+    <div id="output"></div>
+    <script>
+        var output = document.getElementById("output");
+        
+        function makeMessage(s1,s2,callback){
+            var result1 = callback(s1,s2);
+            output.innerHTML += result1;
+        }
+        
+        makeMessage("hello","world",function(s1,s2){
+            var result2 = s1 + s2 + "worked";
+            return result2;
+        })
+        
+        makeMessage("Java","Script",function(s1,s2){
+            var result2 = s1 + s2 + " is great" + s1;
+            return result2;
+        })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>

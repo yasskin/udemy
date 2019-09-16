@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <input type="text" id="item">
+    <br>
+    <input type="button" onClick="addItem()" value="Add Item">
+    <br>
+    <div id="output"></div>
+    
+    <script>
+        var output = document.getElementById("output");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <input type="text" id="searchYoutube">
+    <input type="button" id="search" value="Search Youtube">
+    <div id="output1"></div>
+    <script>
+        window.onload = init;
+
+        function init() {
+            document.getElementById('search').addEventListener('click', ySearch, false);
+        }
+
+        function ySearch() {
+            var searchTerm = document.getElementById('searchYoutube').value;
+            searchTerm = encodeURIComponent(searchTerm);
+            var url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key=**********************&q=' + searchTerm + '&maxResults=20';
+            getJSON(url, function (data) {
+                showResults(data.items);
+            })
+        }
+
+        function showResults(results) {
+            var html = "";
+            for (var value in results) {
+                console.log(results[value]);
+                var title = results[value].snippet.title;
+                var description = results[value].snippet.description;
+                var img = results[value].snippet.thumbnails.default.url;
+                html += '<div><h3>' + title + '</h3><p>' + description + '</p><img src="' + img + '"></div>';
+            }
+            document.getElementById('output1').innerHTML = html;
+        }
+
+        function getJSON(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    callback(xhr.response);
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

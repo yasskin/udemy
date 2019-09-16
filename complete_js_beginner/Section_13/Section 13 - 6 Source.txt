@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .toggle {
+            padding: 10px;
+            background-color: aliceblue;
+            font-size: 1.3em;
+            margin: 10px;
+        }
+        
+        .active {
+            background-color: aquamarine;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Asynchronous JavaScript And XML.</div>
+    <div id="output">Complete JavaScript Course </div> Guest Name :
+    <input type="text" id="guestName"> +
+    <input type="number" id="guestNum" value="0">
+    <input type="button" value="add">
+    <script>
+        window.onload = init;
+
+        function init() {
+            loadJSON();
+            /*
+            loadJSON(function(response){
+                 console.log(response);
+             })
+             */
+        }
+
+        function loadJSON(callback) {
+            var xHR = new XMLHttpRequest;
+            xHR.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    console.log(myObj);
+                }
+            }
+            xHR.open('GET', 'https://api.myjson.com/bins/kbwi5', true);
+            xHR.send();
+            console.log(xHR);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+https://console.developers.google.com/
+https://developers.google.com/youtube/v3/getting-started
+
+https://www.googleapis.com/youtube/v3/search/?part=snippet&key=********************&q=test&maxResults=20
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <input type="text" id="searchYoutube">
+    <input type="button" id="search" value="Search Youtube">
+    <div id="output1"></div>
+    <script>
+        window.onload = init;
+
+        function init() {
+            document.getElementById('search').addEventListener('click', ySearch, false);
+        }
+
+        function ySearch() {
+            var searchTerm = document.getElementById('searchYoutube').value;
+            var url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key=********************&q=test&maxResults=20';
+            getJSON(url, function (data) {
+                console.log(data);
+            })
+        }
+
+        function getJSON(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    callback(xhr.response);
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

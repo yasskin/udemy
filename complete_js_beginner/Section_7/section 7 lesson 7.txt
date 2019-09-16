@@ -1,0 +1,4 @@
+        var output = document.getElementById("output");
+        var a = function(b){
+            output.innerHTML = "Welcome to an anonymous function "+b;
+        }

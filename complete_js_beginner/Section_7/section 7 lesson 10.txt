@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <input type="button" onClick="start()" value="Start Game">
+    <script>
+        var secretWord = ["JavaScript", "html", "css", "website", "a", 2, 4, 5, 6, 3, 4, 4, 5, 66565, 1231];
+        var output = document.getElementById("output");
+
+        function start() {
+            shuffleArray(secretWord);
+            output.innerHTML += secretWord + "<br>";
+        }
+
+        function shuffleArray(arr) {
+            for (var x = arr.length - 1; x > 0; x--) {
+                var holder = Math.floor(Math.random() * (x + 1));
+                var temp = arr[x];
+                arr[x] = arr[holder];
+                arr[holder] = temp;
+            }
+            return arr;
+        }
+    </script>
+</body>
+
+</html>

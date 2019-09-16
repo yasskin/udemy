@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course</div> Search for :
+    <input id="sText" type="text">
+    <br> Replace with :
+    <input id="rText" type="text">
+    <br>
+    <input type="button" onclick="lookUp()" value="find text">
+    <script>
+        function lookUp() {
+            var s = document.getElementById('output').innerText;
+            var st = document.getElementById('sText').value;
+            var rt = document.getElementById('rText').value;
+            var re = new RegExp(st, "gi");
+            var result = s.match(re);
+            if (result) {
+                var rr = s.replace(re, rt);
+                document.getElementById('output').innerText = rr;
+            }
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+document.body
+console.dir(document.body)
+console.dir(document.body.myForm)
+console.dir(document.body.children)
+console.dir(document.body.children.myForm)
+console.dir(document.body.children.myForm.childNodes[9])
+console.dir(document.body.children.myForm.childNodes[9].children)
+var a = document.body.children.myForm.childNodes[9].children.four
+a.nextElementSibling.id
+a.previousElementSibling.id
+a.parentElement.firstElementChild
+a.parentElement.firstElementChild.id
+a.parentElement.lastElementChild.id
+
+<html>
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form name="myForm">
+        <input type="url" id="url" name="url">
+        <input type="text" id="first" name="first">
+        <input type="text" id="last" name="last">
+        <textarea name="output"></textarea>
+        <div id="another">Parent
+            <div id="one">Test 1</div>
+            <div id="two">Test 2</div>
+            <div id="three">Test 3</div>
+            <div id="four">Test 4</div>
+            <div id="five">Test 5</div>
+            <div id="six">Test 6</div>
+        </div>
+        <input id="btn1" onclick="myFun1()" value="Click Here"> </form>
+    <script>
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        "use strict"
+
+        function* pgGen() {
+            let counter = 0;
+            while (counter < 20) {
+                yield counter++;
+            }
+        }
+        let pg = pgGen();
+        for (let i = 0; i < 10; i++) {
+            let holder = pg.next();
+            if (holder.done) {
+                break;
+            }
+            console.log(holder.value);
+            //console.log(holder.done);
+        }
+        console.log(pg);
+        console.log(pg.next());
+        console.log(pg.next());
+        console.log(pg.next());
+        console.log(pg.next());
+    </script>
+</body>
+
+</html>

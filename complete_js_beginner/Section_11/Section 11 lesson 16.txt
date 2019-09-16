@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .btn {
+            background-color: red;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1em;
+            padding: 15px;
+            color: white;
+        }
+        
+        .btn:hover {
+            background-color: crimson;
+        }
+        
+        .gameTile {
+            display: inline-block;
+            padding: 3px;
+        }
+        
+        .flipImage {
+            max-width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <div id="wrapper">
+        <div id="start" class="btn">Start</div>
+        <div id="score"></div>
+        <div id="message"></div>
+        <div id="gameboard"></div>
+    </div>
+    <script>
+        var playLockout = false;
+        var gamePlay = false;
+        var tileImages = []
+            , tileArray = []
+            , tileFlippedOver = [];
+        var sb = document.getElementById('start');
+        var message = document.getElementById('message');
+        var score = document.getElementById('score');
+        var gameBoard = document.getElementById('gameboard');
+        sb.addEventListener('click', startGame);
+
+        function startGame() {
+            // hide start button
+            sb.style.display = 'none';
+            message.innerHTML = "Its working" + gamePlay;
+            if (!gamePlay) {
+                gamePlay = true;
+                buildArray();
+                tileArray = tileImages.concat(tileImages);
+                shuffleArray(tileArray);
+                buildBoard();
+            }
+        }
+
+        function buildBoard() {
+            var html = "";
+            var x = 0;
+            tileArray.forEach(function (ele) {
+                x++;
+                html += '<div class="gameTile">';
+                html += '<img id="cardz' + x + '" src="http://via.placeholder.com/250/000000/ffffff?text=click" onclick="pickCard(' + x + ',this)" class="flipImage"></div>';
+            });
+            gameBoard.innerHTML = html;
+        }
+
+        function buildArray() {
+            for (var x = 1; x < 7; x++) {
+                tileImages.push(x + '.jpg');
+            }
+        }
+
+        function shuffleArray(array) {
+            for (var x = array.length - 1; x > 0; x--) {
+                var holder = Math.floor(Math.random() * (x + 1));
+                var itemValue = array[x];
+                array[x] = array[holder];
+                array[holder] = itemValue;
+            }
+            return array;
+        }
+    </script>
+</body>
+
+</html>

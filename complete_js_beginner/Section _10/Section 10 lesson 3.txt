@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <input type="text" id="myString">
+    <input type="number" id="guess">
+    <input type="button" value="Guess" onclick="checkGuess()">
+    <script>
+        // input for string
+        // input to guess the length of the string
+        // button to trigger function
+        // check if the guess is correct 
+        var a = "world hello";
+        var b = new String("Hello World");
+        var message = document.getElementById('message');
+
+        function checkGuess() {
+            var myString = document.getElementById('myString').value;
+            var myGuess = document.getElementById('guess').value;
+            if (myString.length == myGuess) {
+                message.innerHTML = "Correct it was " + myString.length;
+            }
+            else {
+                message.innerHTML = "WRONG it was  " + myString.length;
+            }
+        }
+    </script>
+</body>
+
+</html>

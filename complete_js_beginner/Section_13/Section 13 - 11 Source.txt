@@ -1,0 +1,44 @@
+https://www.apachefriends.org/index.html
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <input type="text" id="idTxt">
+    <input type=" button" id="sendData" value="Send">
+    <script>
+        document.getElementById('sendData').addEventListener('click', myFunction);
+
+        function myFunction() {
+            var txt = document.getElementById('idTxt').value;
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                    console.log(this.responseText);
+                }
+            }
+            xhr.open("post", "http://localhost/JavaScript/post.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("name=" + txt + "&age=50");
+        }
+    </script>
+</body>
+
+</html>
+
+
+**************PHP CODE ****************
+<?php
+header("Access-Control-Allow-Origin: *");
+echo $_POST['name'] . " " .  $_POST['age'];
+//echo $_GET['name'];
+//echo date('l jS \of F Y h:i:s A');
+?>

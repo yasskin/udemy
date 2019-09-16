@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        #overlay {
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 400px;
+            background-color: #ddd;
+            border: 1px solid black;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="oLay" value="Pop Up Window">
+    <div id="message">Message 1</div>
+    <div class="output">Test Me 1</div>
+    <div class="output">Test Me 2</div>
+    <div id="pickme1">
+        <div class="output highlight">Test Me 3</div>
+    </div>
+    <input type="text" name="queryStuff" id="queryStuff">
+    <div id="pickme2">
+        <div class="output">Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4</div>
+        <div class="output">Test Me 5</div>
+        <div class="output">Test Me 6</div>
+    </div>
+    <div class="output highlight">Test Me 7</div>
+    <div class="output">Test Me 8 Test Me 8Test Me 8Test Me 8Test Me 8Test Me 8Test Me 8Test Me 8</div>
+    <div class="output">Test Me 9</div>
+    <div class="output">Test Me 10</div>
+    <br>
+    <div id="overlay">
+        <div>
+            <p>Some default content here nothing important. Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('oLay').onclick = function () {
+            var el = document.getElementById('overlay');
+            el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+        }
+    </script>
+</body>
+
+</html>

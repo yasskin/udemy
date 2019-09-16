@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        class MakeName {
+            constructor(first, last) {
+                this.firstName = first;
+                this.lastName = last;
+            }
+            completeName() {
+                console.log(this);
+                console.log(this.firstName + " " + this.lastName);
+            }
+        }
+        let friend = new MakeName("Laurence", "Svekis");
+        friend.completeName();
+    </script>
+</body>
+
+</html>

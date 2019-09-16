@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div id="output"> </div>
+    <input type="text" value="This is some dummy text Complete JavaScript Course" id="myT">
+    <script>
+        document.getElementById('myT').addEventListener('select', myFun);
+
+        function myFun() {
+            var e = event.target;
+            var str = event.target.value;
+            var result = str.substring(e.selectionStart, e.selectionEnd);
+            document.getElementById('output').innerText = result;
+        }
+    </script>
+</body>
+
+</html>

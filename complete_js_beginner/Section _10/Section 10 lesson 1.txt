@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <input type="button" value="pop" onclick="popup()">
+    <input type="button" value="close" onclick="popclose()">
+    <script>
+        var wn;
+
+        function popup() {
+    wn =window.open("index.html", "_blank", "top=100,left=500,width=400,height=400");
+        }
+
+        function popclose() {
+            wn.close();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+https://www.apachefriends.org/index.html
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        function cCookie(name, value, days) {
+            var e = "";
+            if (days) {
+                var d = new Date();
+                d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+                e = "; expires=" + d.toUTCString();
+            }
+            document.cookie = name + "=" + value + e + "; path=/";
+        }
+
+
+    </script>
+</body>
+
+</html>

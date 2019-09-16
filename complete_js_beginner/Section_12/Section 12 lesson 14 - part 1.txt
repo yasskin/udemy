@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <canvas id="canvas"></canvas>
+    <script>
+        window.onload = init;
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.height = 600;
+        canvas.width = 500;
+              ctx.beginPath();
+            ctx.fillStyle = "red";
+            ctx.arc(pos.x, pos.y, 50, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.closePath();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <canvas id="canvas"></canvas>
+    <script>
+        window.onload = init;
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.height = 600;
+        canvas.width = 500;
+        var pos = {
+            x: 0
+            , y: 50
+        };
+        var pos1 = {
+            x: 100
+            , y: 50
+        };
+
+        function init() {
+            draw();
+        }
+
+        function draw() {
+            pos.x = pos.x + 5;
+            pos1.y = pos1.y + 5;
+            if (pos.x > canvas.width) {
+                pos.x = 0;
+            }
+            if (pos1.y > canvas.height) {
+                pos1.y = 0;
+            }
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.fillStyle = "red";
+            ctx.arc(pos.x, pos.y, 50, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.closePath();
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.arc(pos1.x, pos1.y, 70, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.closePath();
+            window.setTimeout(draw, 50);
+        }
+    </script>
+</body>
+
+</html>

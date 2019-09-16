@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        let myArr = [1, 4, 6, 3, 6, 3, 6, 3, 644, 23, 32, 2, 3, 4, 5, 6, 7, 87, 2, 3, 4, 3, 43, 33];
+        console.log(myArr);
+
+        function removeDup(a) {
+            return [...new Set(a)];
+        }
+        let mapArray = myArr.map(function (a) {
+            return a *= 10;
+        })
+        console.log(mapArray);
+        let myMap = new Map();
+        myMap.set("Hello", "World");
+        myMap.set("myName", "Laurence");
+        myMap.set("Hello", "World");
+        myMap.set("myName", "Laurence");
+        //myMap.delete("Hello");
+        console.log(myMap);
+        console.log(myMap.size);
+        console.log(myMap.has("World"));
+        console.log(myMap.get("Hello"));
+        let items = [{
+            name: 'iPhone'
+            , details: 'White'
+            , cost: 50000
+        }, {
+            name: 'iPad'
+            , details: 'White'
+            , cost: 80000
+        }, {
+            name: 'Cable'
+            , details: '3 foot'
+            , cost: 1000
+        }, {
+            name: 'Camera'
+            , details: '25MP'
+            , cost: 30000
+        }, {
+            name: 'Laptop'
+            , details: 'Intel i7'
+            , cost: 120000
+        }, {
+            name: 'LCD Monitor'
+            , details: '24 inch'
+            , cost: 20000
+        }, {
+            name: 'TV'
+            , details: '50 inch'
+            , cost: 45000
+        }];
+        console.log(items);
+        let holderNames = items.map(function (items) {
+            return items.name;
+        })
+        console.log(holderNames);
+        let holderCosts = items.map(items => items.cost);
+        console.log(holderCosts);
+    </script>
+</body>
+
+</html>

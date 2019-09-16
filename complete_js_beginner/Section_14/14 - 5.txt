@@ -1,0 +1,5 @@
+        let a = "More Lines \n\
+        More Lines";
+        let b = `More " ' " ' '"" ' '' ' ' 'Lines
+        More Lines
+More Lines`;

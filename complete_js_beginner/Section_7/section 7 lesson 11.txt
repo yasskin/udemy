@@ -1,0 +1,10 @@
+        var outsideFun = "outside";
+        
+        function myFun() {
+            var insideFun = "inside";
+            console.log(outsideFun);
+            console.log(insideFun);
+        }
+        
+        myFun();
+        console.log(outsideFun);

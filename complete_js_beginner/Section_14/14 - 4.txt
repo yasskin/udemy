@@ -1,0 +1,11 @@
+        let a = " Hello World      ";
+        a.trim()
+        a.startsWith("He")
+        a.startsWith(" He")
+        a.endsWith(" He")
+        let b = "mywebsite.com"
+        b.endsWith(".com")
+        a.includes("Hell")
+        a.includes("hello")
+        a.repeat(3)
+        a = a.repeat(8)

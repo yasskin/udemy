@@ -1,0 +1,37 @@
+isNaN(a)
+isNaN(d)
+isNaN(c)
+typeof d
+d = Number(d)
+d = String(d)
+parseInt(d)
+
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <script>
+        var a = 400;
+        var b = "Hello World";
+        var c = "http://www.google.com?id=1000&n=5   0    0";
+        var d = "400";
+        var e = encodeURIComponent(c);
+        var f = decodeURIComponent(e);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+

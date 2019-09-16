@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <input type="button" onClick="start()" value="Start Game">
+    <script>
+        var secretWord = ["JavaScript", "html", "css", "website"];
+        var mysteryNum;
+        var output = document.getElementById("output");
+
+        function start() {
+            mysteryNum = Math.floor(Math.random() * secretWord.length);
+            getSecret(prompt("what is the word?"));
+        }
+
+        function getSecret(secret) {
+            if (secret == secretWord[mysteryNum]) {
+                output.innerHTML = "You are correct";
+            }
+            else {
+                getSecret(prompt("Guess Again?"));
+            }
+        }
+    </script>
+</body>
+
+</html>

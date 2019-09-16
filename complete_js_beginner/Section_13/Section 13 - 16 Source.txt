@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <div id="output1"></div>
+    <script>
+        window.onload = init;
+        var myData = {};
+        var page = 0;
+        var score = 0;
+        var userAnswer = [];
+        var output = document.getElementById('output1');
+        output.addEventListener('click', function () {
+            console.log(event.target);
+        })
+
+        function init() {
+            getJSON('http://api.myjson.com/bins/12qsf', function (response) {
+                myData = response;
+                buildPage();
+            })
+        }
+
+        function buildPage() {
+            var p = myData[page];
+            var html = '';
+            html += '<div>' + p.question + '?</div>';
+            for (var x = 0; x < p.answers.length; x++) {
+                var answer = x == p.correct ? true : false;
+                html += '<div data-id="' + answer + '">' + p.answers[x] + '</div>';
+            }
+            output.innerHTML = html;
+            console.log(p);
+        }
+
+        function getJSON(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    callback(xhr.response);
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

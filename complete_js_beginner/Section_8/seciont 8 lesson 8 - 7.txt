@@ -1,0 +1,5 @@
+From Console at Google.com
+
+document.body.children
+document.body.children[3].innerHTML = "Google"
+document.body.children[4].children[1].children[1].name

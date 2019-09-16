@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <input type="button" id="myButton" value="Load Data">
+    <script>
+        window.onload = init;
+        var pick = "";
+
+        function init() {
+            document.getElementById('myButton').addEventListener('click', myLoader, false);
+        }
+
+        function myLoader() {
+            var xHR = new XMLHttpRequest();
+            xHR.onload = rOutput;
+            xHR.open('get', 'https://restcountries.eu/rest/v2/all', true);
+            xHR.send();
+        }
+
+        function rOutput() {
+            var myObj = JSON.parse(this.responseText);
+            pick = myObj[Math.floor(Math.random() * myObj.length)];
+            console.log(pick);
+        }
+    </script>
+</body>
+
+</html>

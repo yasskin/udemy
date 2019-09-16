@@ -1,0 +1,65 @@
+var message = document.getElementById('message');
+message.style.display = "none"
+message.style.display = "block"
+message.style.color = "red"
+message.style.borderBottomColor = "blue"
+message.style.border = "1px solid"
+message.style.backgroundColor = "yellow"
+
+
+
+<html>
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body onload="start()">
+    <div id="message">Message 1</div>
+    <div class="output">Test Me 1</div>
+    <div class="output">Test Me 2</div>
+    <div id="pickme1">
+        <div class="output highlight">Test Me 3</div>
+    </div>
+    <input type="text" name="queryStuff" id="queryStuff">
+    <input type="button" onclick="mySel()" value="Get Query">
+    <div id="pickme2">
+        <div class="output">Test Me 4</div>
+        <div class="output">Test Me 5</div>
+        <div class="output">Test Me 6</div>
+    </div>
+    <div class="output highlight">Test Me 7</div>
+    <div class="output">Test Me 8</div>
+    <div class="output">Test Me 9</div>
+    <div class="output">Test Me 10</div>
+    <script>
+        var bgColor = ["red", "blue", "green", "yellow", "pink", "purple"];
+        var message = document.getElementById('message');
+        var c;
+        var el = document.querySelectorAll('.output');
+
+        function start() {
+            setInterval(swapBg, 2000);
+        }
+
+        function swapBg() {
+            for (var x = 0; x < el.length; x++) {
+                c = bgColor[Math.floor(Math.random() * bgColor.length)];
+                el[x].style.backgroundColor = c;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

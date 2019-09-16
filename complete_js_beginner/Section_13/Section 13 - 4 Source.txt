@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .toggle {
+            padding: 10px;
+            background-color: aliceblue;
+            font-size: 1.3em;
+            margin: 10px;
+        }
+        
+        .active {
+            background-color: aquamarine;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Party invite Checklist</div>
+    <div id="output">Complete JavaScript Course </div> Guest Name :
+    <input type="text" id="guestName"> +
+    <input type="number" id="guestNum" value="0">
+    <input type="button" value="add">
+    <script src="json.json"></script>
+    <script>
+        var party = [];
+        var el;
+        var output = document.getElementById('output');
+        window.onload = buildList;
+        var addGuest = document.querySelector('input[type="button"]');
+        addGuest.addEventListener('click', function (e) {
+            var g = document.getElementById('guestName');
+            var n = document.getElementById('guestNum');
+            message('?', g.value + ' +' + n.value, party.length, '');
+            party.push({
+                name: g.value
+                , guests: Number(n.value)
+                , status: false
+            })
+            g.value = "";
+            n.value = 0;
+        })
+        output.addEventListener('click', function (e) {
+            el = e.target;
+            var ds = el.dataset;
+            el.classList.toggle('active');
+            el.children[0].innerHTML = el.children[0].innerHTML == '?' ? '?' : '?';
+            party[ds.id].status = party[ds.id].status ? false : true;
+            console.log(party);
+        })
+
+        function buildList() {
+            party = JSON.parse(data);
+            for (var x = 0; x < party.length; x++) {
+                var person = party[x].name + ' +' + party[x].guests;
+                if (party[x].status) {
+                    message('?', person, x, 'active');
+                }
+                else {
+                    message('?', person, x, '');
+                }
+            }
+        }
+
+        function message(m, person, id, c) {
+            output.innerHTML += '<div class="toggle ' + c + '" data-id="' + id + '" data-person="' + person + '" ><span>' + m + '</span> ' + person + ' </div>';
+        }
+    </script>
+</body>
+
+</html>

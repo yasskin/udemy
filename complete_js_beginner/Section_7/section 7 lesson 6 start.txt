@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body> Code :
+    <input type="text" id="code1">
+    <input type="text" id="code2">
+    <input type="text" id="code3">
+    <br>
+    <input type="button" onClick="crack()" value="Try Code">
+    <br>
+    <div id="output"></div>
+    <script>
+
+        
+    </script>
+</body>
+
+</html>

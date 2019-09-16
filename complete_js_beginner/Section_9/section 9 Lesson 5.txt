@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        #pickme .output {
+            background-color: aqua;
+        }
+        
+        input[name="last"] {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Message 1</div>
+    <div id="message1">Message 2</div>
+    <div class="output">Test Me 1</div>
+    <div class="output">Test Me 2</div>
+    <div id="pickme">
+        <div class="output highlight">Test Me 3</div>
+    </div>
+    <input type="text" name="first">
+    <input type="text" name="last">
+    <div class="output">Test Me 4</div>
+    <div class="output">Test Me 5</div>
+    <div class="output">Test Me 6</div>
+    <div class="output highlight">Test Me 7</div>
+    <div class="output">Test Me 8</div>
+    <div class="output">Test Me 9</div>
+    <div class="output">Test Me 10</div>
+    <script>
+        var message = document.getElementById('message');
+        var message1 = document.getElementById('message1');
+        var el = document.querySelector('input[name="last"]');
+        el.value = "It worked";
+    </script>
+</body>
+
+</html>

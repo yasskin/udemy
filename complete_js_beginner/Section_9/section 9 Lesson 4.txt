@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Message 1</div>
+    <div id="message1">Message 2</div>
+    <div class="output">Test Me 1</div>
+    <div class="output">Test Me 2</div>
+    <div class="output highlight">Test Me 3</div>
+    <div class="output">Test Me 4</div>
+    <div class="output">Test Me 5</div>
+    <div class="output">Test Me 6</div>
+    <div class="output highlight">Test Me 7</div>
+    <div class="output">Test Me 8</div>
+    <div class="output">Test Me 9</div>
+    <div class="output">Test Me 10</div>
+    <script>
+        var elClass = document.getElementsByClassName('output');
+        var highClass = document.getElementsByClassName('highlight');
+        var message = document.getElementById('message');
+        var message1 = document.getElementById('message1');
+        for (var x = 0; x < elClass.length; x++) {
+            elClass[x].onclick = function () {
+                message.innerHTML = event.target.innerHTML;
+            }
+        }
+        for (var x = 0; x < highClass.length; x++) {
+            highClass[x].onclick = function () {
+                message1.innerHTML = "CLICKED highlighted";
+            }
+        }
+    </script>
+</body>
+
+</html>

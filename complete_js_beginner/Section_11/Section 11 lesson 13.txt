@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        //"use strict";
+        myFun();
+        console.log(a);
+
+        function myFun() {
+            a = "Hello World";
+        }
+    </script>
+</body>
+
+</html>

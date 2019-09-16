@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Page 1</div> <a href="index3.html">Index3</a> <a href="index.html">Index</a> <a href="index2.html">Index2</a>
+    <input type="button" onclick="startInt()" value="start">
+    <input type="button" onclick="clearInt()" value="stop">
+    <script>
+        var output = document.getElementById('wrapper');
+        window.setTimeout(updateWrapper, 5000);
+        var myTimer;
+
+        function startInt() {
+            myPopup();
+            myTimer = window.setTimeout(startInt, 1000);
+        }
+
+        function updateWrapper() {
+            document.getElementById('wrapper').innerHTML = "welcome to my website :)";
+        }
+
+        function clearInt() {
+            window.clearInterval(myTimer);
+        }
+
+        function myPopup() {
+            alert("Hello");
+        }
+    </script>
+</body>
+
+</html>

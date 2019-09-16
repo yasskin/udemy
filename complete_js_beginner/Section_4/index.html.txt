@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="output">Hello World</div>
+    <input type="text" id="val" >
+    <script>
+        var output = document.getElementById('output');
+        var val = document.getElementById('val');      
+        val.value = output.innerHTML;
+    </script>
+</body>
+
+</html>

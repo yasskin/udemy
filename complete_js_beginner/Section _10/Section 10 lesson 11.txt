@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        #output {
+            width: 400px;
+            height: 400px;
+            display: block;
+            border: 1px solid black;
+        }
+        
+        #cButtons > div {
+            width: 100px;
+            display: inline-block;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <input type="button" value="start" onclick="start()">
+    <div id="output"></div>
+    <div id="cButtons"> </div>
+    <div id="guess"></div>
+    <script>
+        var arr1 = [];
+        var arr2 = [];
+        var myT;
+        var loop = 0;
+        var output = document.getElementById('output');
+        var message = document.getElementById('message');
+
+        function start() {
+            var colorArr = ["red", "green", "blue", "yellow"];
+            var html = "";
+            for (var x = 0; x < colorArr.length; x++) {
+                html += '<div class="' + colorArr[x] + '" style="background-color:' + colorArr[x] + '" onclick="oGuess()">' + colorArr[x] + '</div>';
+            }
+            document.getElementById('cButtons').innerHTML = html;
+            for (var x = 0; x < 4; x++) {
+                var r = colorArr[Math.floor(Math.random() * colorArr.length)];
+                arr1.push(r);
+            }
+            loop = 0;
+            console.log(loop)
+            myT = setTimeout(goWhite, 200);
+        }
+
+        function oGuess() {
+            var g = event.target.className;
+            arr2.push(g);
+            if (arr2.length == arr1.length) {
+                if (arr1.toString() == arr2.toString()) {
+                    message.innerText = "you were correct :)";
+                }
+                else {
+                    message.innerHTML = "you were wrong <br> Your guess " + arr2 + "<br>correct order was " + arr1;
+                }
+            }
+        }
+
+        function goWhite() {
+            output.style.backgroundColor = "white";
+            myT = setTimeout(goColor, 200);
+        }
+
+        function goColor() {
+            output.style.backgroundColor = arr1[loop];
+            loop++;
+            if (loop >= arr1.length) {
+                clearTimeout(myT);
+            }
+            myT = setTimeout(goWhite, 1000);
+        }
+    </script>
+</body>
+
+</html>

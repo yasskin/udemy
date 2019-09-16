@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course</div>
+
+    <input type="text" id="email" value="email@gmail.com">
+    <input type="text" id="num" value="123321">
+    <input type="text" id="cha" value="characters">
+    <input type="button" onclick="myFun()" value="Validate Inputs">
+    <script>
+
+        // number input only digits
+        // email input
+        // text input only char
+        // all need to have content
+        
+        
+        
+        var output = document.getElementById('output');
+        var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";
+        
+        
+        
+        
+        function myFun(){
+            e = document.getElementById('email').value;
+            var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;
+            var r = e.match(p);
+            var t = r == null ? false : true;
+            console.log(t);
+            return t;
+     }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>

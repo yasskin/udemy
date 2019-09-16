@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .con {
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 0.8em;
+            display: none;
+        }
+        
+        .acc {
+            font-size: 1.5em;
+            background-color: #ddd;
+        }
+        
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="acc">Information about JavaScript</div>
+    <div class="con">Complete JavaScript Course Complete JavaScript Course Complete JavaScript Course <img src="http://via.placeholder.com/350x150?text=Image1"></div>
+    <div class="acc">More Read JavaScript</div>
+    <div class="con">Blah blah blah blah e <img src="http://via.placeholder.com/150x150?text=Image2"></div>
+    <div class="acc">More Read JavaScript</div>
+    <div class="con">Blah blah blah blah e <img src="http://via.placeholder.com/150x150?text=Image2"></div>
+    <div class="acc">More Read JavaScript</div>
+    <div class="con">Blah blah blah blah e <img src="http://via.placeholder.com/150x150?text=Image2"></div>
+    <div class="acc">More Read JavaScript</div>
+    <div class="con">Blah blah blah blah e <img src="http://via.placeholder.com/150x150?text=Image2"></div>
+    <script>
+        var aTitle = document.querySelectorAll('.acc');
+        var c = document.querySelectorAll('.con');
+        for (var x = 0; x < aTitle.length; x++) {
+            aTitle[x].onclick = function () {
+                cCon(this.nextElementSibling);
+                this.nextElementSibling.classList.toggle('active');
+            }
+        }
+
+        function cCon(t) {
+            for (var x = 0; x < c.length; x++) {
+                if (t != c[x]) {
+                    c[x].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

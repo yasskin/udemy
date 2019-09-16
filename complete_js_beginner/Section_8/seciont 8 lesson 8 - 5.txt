@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Page 1</div>
+    <script>
+        var output = document.getElementById('wrapper');
+        output.innerHTML = navigator.userAgent;
+    </script>
+</body>
+
+</html>

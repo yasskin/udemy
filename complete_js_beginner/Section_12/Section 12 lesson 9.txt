@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .item {
+            border: 1px solid black;
+            padding: 2%;
+            width: 29%;
+            float: left;
+            height: 300px;
+        }
+        
+        .img-fluid {
+            max-width: 100%;
+        }
+        
+        .productItem {
+            border: 1px solid black;
+            text-decoration: none;
+            background-color: green;
+            color: azure;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 0.6em;
+            display: inline-block;
+        }
+        
+        td {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        
+        th {
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <div id="output2">Shopping Cart</div>
+    <script>
+        var items = [{
+            name: 'iPhone'
+            , details: 'White'
+            , cost: 500
+        }, {
+            name: 'iPad'
+            , details: 'White'
+            , cost: 800
+        }, {
+            name: 'Cable'
+            , details: '3 foot'
+            , cost: 10
+        }, {
+            name: 'Camera'
+            , details: '25MP'
+            , cost: 300
+        }, {
+            name: 'Laptop'
+            , details: 'Intel i7'
+            , cost: 1200
+        }, {
+            name: 'LCD Monitor'
+            , details: '24 inch'
+            , cost: 200
+        }, {
+            name: 'TV'
+            , details: '50 inch'
+            , cost: 450
+        }];
+        var html = '<br>';
+        var shopcart = [];
+        window.onload = init;
+
+        function init() {
+            buildItems();
+            var q = document.querySelectorAll('.productItem');
+            for (var x = 0; x < q.length; x++) {
+                q[x].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    addToCart();
+                })
+            }
+            outputCart();
+        }
+
+        function addToCart() {
+            var iteminfo = event.target.dataset;
+            var itemincart = false;
+            iteminfo.qty = 1;
+            shopcart.forEach(function (v) {
+                if (v.id == iteminfo.id) {
+                    v.qty = parseInt(v.qty) + parseInt(iteminfo.qty);
+                    itemincart = true;
+                }
+            });
+            if (!itemincart) {
+                shopcart.push(iteminfo);
+            }
+            localStorage.setItem('scart', JSON.stringify(shopcart));
+            outputCart();
+        }
+
+        function outputCart() {
+            if (localStorage.getItem('scart') != null) {
+                shopcart = JSON.parse(localStorage.getItem('scart'));
+            }
+            var html = '<table><tr><th>Item</th><th>Quantity</th><th>cost</th><th>id</th><th>subtotal</th><th>Options</th></tr>';
+            var total = 0;
+            shopcart.forEach(function (v) {
+                var stotal = v.qty * v.price;
+                total += stotal;
+                html += '<tr><td>' + v.name + '(' + v.s + ')</td><td>' + v.qty + '</td><td>' + v.price + '</td><td>' + v.id + '</td><td>' + fMoney(stotal) + '</td><td></td></tr>';
+            });
+            html += '<tr><td colspan=6>Total ' + fMoney(total) + '</td></tr></table>';
+            document.getElementById('output2').innerHTML = html;
+        }
+
+        function buildItems() {
+            var x = 0;
+            items.forEach(function (v) {
+                html += '<div class="item"><h3>' + v.name + '</h3><img src="http://placehold.it/350x150" class="img-fluid"><div>' + v.details + ' <br><a href="#" class="productItem" data-name="' + v.name + '" data-s="' + v.details + '"  data-price="' + v.cost + '" data-id="' + x + '" >Add to Cart</a></div></div>';
+                x++;
+            })
+            document.getElementById('output').innerHTML += html;
+        }
+
+        function fMoney(n) {
+            return '$' + (n / 100).toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

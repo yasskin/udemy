@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        const friend = {
+            firstName: "Larry"
+            , lastName: "Svekis"
+        }
+        const myArr = [];
+        for (let i = 0; i < 10; i++) {
+            myArr.push(i);
+        }
+        console.log(myArr);
+    </script>
+</body>
+
+</html>

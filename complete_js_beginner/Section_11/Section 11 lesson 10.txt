@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        var myArr = ["Laurence", "Mike", "Larry"];
+
+        function showNames() {
+            console.log(arguments);
+            console.log(arguments[0]);
+        }
+        showNames(myArr, "JavaScript");
+    </script>
+</body>
+
+</html>

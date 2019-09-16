@@ -1,0 +1,13 @@
+        var output = document.getElementById("output");
+        var addItem;
+        var shoppingList = [];
+        var howManyTimes = prompt("How many items would you like to add?")
+        for(var x = 0; x< howManyTimes; x++){
+            addItem = prompt("What do you want to add?");
+            if(addItem == "no"){break;}
+            shoppingList.push(addItem);
+        }
+        
+        for( myItem of shoppingList){
+            output.innerHTML += myItem + "<br>";
+        }

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <input type="text" id="myString">
+    <input type="button" value="Replace" onclick="rHeading()">
+    <script>
+        var a = "world hello";
+        var b = new String("Hello World");
+        var message = document.getElementById('message');
+        var holder = "JavaScript";
+
+        function rHeading() {
+            var m = document.getElementById('myString').value;
+            var c = message.innerText;
+            c = c.replace(holder, m);
+            holder = m;
+            message.innerText = c;
+        }
+    </script>
+</body>
+
+</html>

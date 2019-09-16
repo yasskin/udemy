@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        console.log(a);
+        var a = "hello world";
+        const b = "constant";
+        let c = "hello world";
+        for (var i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        if (a) {
+            let d = "works";
+            console.log(d);
+        }
+        else {
+            let d = "not working";
+            console.log(d);
+        }
+    </script>
+</body>
+
+</html>

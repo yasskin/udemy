@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div id="wrapper">Page 1</div> <img id="imgSwap">
+    <script>
+        var i = document.getElementById('imgSwap');
+        var imgHolder = "http://via.placeholder.com/350x150/ffff00/fff?text=Image10";
+        var t;
+        window.onload = function () {
+            i.src = imgHolder;
+        }
+        i.addEventListener('click', function () {
+            console.log(event);
+            message("clicked");
+        })
+        i.addEventListener('mouseover', function () {
+            t = this.src;
+            this.src = "http://via.placeholder.com/350x150/ff0000/fff?text=Image2";
+            message("Over");
+        })
+        i.addEventListener('mouseout', function () {
+            this.src = t;
+            message("Out");
+        })
+
+        function cImg(t) {
+            message(t.src);
+            imgHolder = t.src;
+            //http://via.placeholder.com/350x150/ff0000/fff?text=Image2
+            t.src = "http://via.placeholder.com/350x150/ff0000/fff?text=Image2";
+        }
+
+        function bImg(t) {
+            t.src = imgHolder;
+        }
+
+        function message(m) {
+            document.getElementById('wrapper').innerHTML = m;
+        }
+    </script>
+</body>
+
+</html>

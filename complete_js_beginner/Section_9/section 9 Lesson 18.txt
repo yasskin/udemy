@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div id="output">1
+        <div>2
+            <div>3
+                <div>4
+                    <div>5 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function bup() {
+            console.log(this.innerText);
+        }
+        var d = document.getElementsByTagName('div');
+        for (var x = 0; x < d.length; x++) {
+            d[x].addEventListener('click', bup, true);
+        }
+    </script>
+</body>
+
+</html>

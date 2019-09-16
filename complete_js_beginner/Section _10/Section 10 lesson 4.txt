@@ -1,0 +1,58 @@
+a.toUpperCase()
+b.toLowerCase()
+a.indexOf('H')
+a.indexOf('h')
+a.indexOf('hello')
+var c = a + b
+a.indexOf('ello')
+c.lastIndexOf('ello')
+c.slice(6,16);
+c = c.slice(5,16
+c.substr(3,3)
+c.substr(3,5)
+c.substring(3,10)
+
+
+str.toLowerCase().indexOf('javascript')
+
+
+
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JaVaScRipt Course</div>
+    <input type="text" id="myString">
+    <input type="number" id="guess">
+    <input type="button" value="Guess" onclick="checkGuess()">
+    <script>
+        var a = "world hello";
+        var b = new String("Hello World");
+        var message = document.getElementById('message');
+        var str = message.innerText;
+        var hello = b.substr(0, 6);
+        var c = str.toLowerCase().indexOf('javascript');
+        var j = str.substr(c, 1) + str.toLowerCase().substr(c + 1, 9);
+        var jscript = j.substr(0, 4) + j.toUpperCase().substr(4, 1) + j.substr(5);
+        message.innerText = hello + jscript;
+
+        function checkGuess() {
+            var myString = document.getElementById('myString').value;
+            var myGuess = document.getElementById('guess').value;
+            if (myString.length == myGuess) {
+                message.innerHTML = "Correct it was " + myString.length;
+            }
+            else {
+                message.innerHTML = "WRONG it was  " + myString.length;
+            }
+        }
+    </script>
+</body>
+
+</html>

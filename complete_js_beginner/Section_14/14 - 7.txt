@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course </div>
+    <script>
+        const output = document.getElementById('output');
+
+        function outputMessage(message = "No value", b = show(message, "blank", "new")) {
+            output.innerHTML = message;
+        }
+
+        function show() {
+            console.log(arguments[0]);
+        }
+
+        function myFun(a, b, c, d, e) {
+            if (arguments.length == arguments.callee.length) {
+                console.log("okay");
+            }
+            else {
+                console.log("Missing " + (arguments.callee.length - arguments.length));
+            }
+            console.log(arguments);
+            console.log(arguments.length);
+            console.log();
+        }
+        myFun(1, 2, 3);
+    </script>
+</body>
+
+</html>

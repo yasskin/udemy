@@ -1,0 +1,24 @@
+        
+        var output = document.getElementById("output");
+        var answer = prompt("how many times should I loop?");
+
+        
+        
+        var x = 1;
+        while (x < answer) {
+            output.innerHTML += "Value of x = "+x+"<br>";
+            x++;
+        };
+        output.innerHTML += "Final value of x = "+x+"<br>";
+
+
+        var output = document.getElementById("output");
+        var secret = "javascript";
+        
+        var crackCode = prompt("What is the secret word?");
+        
+        while (crackCode != secret) {
+            crackCode = prompt("guess again?");
+        };
+        
+        output.innerHTML += "Final output";
