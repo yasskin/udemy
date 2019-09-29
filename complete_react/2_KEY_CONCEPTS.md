@@ -23,3 +23,10 @@
 * https://facebook.github.io/react-360/
 * React Desktop: bring a native desktop experience to the web for macOS and Windows 10
 * https://reactdesktop.js.org/
+
+
+## Functional Components
+
+* Functional components, unlike classes, do not have access to state or lifecycle methods
+* Functional components is just a component that gets some props and retusn some html
+* 
