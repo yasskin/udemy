@@ -5,7 +5,8 @@
     "noImplicitAny": false,
     "sourceMap": false,
     "noEmitOnError": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "noUnusedParameters": true
   },
   "exclude": ["node_modules"]
 }
