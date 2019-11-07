@@ -6,7 +6,8 @@
     "sourceMap": false,
     "noEmitOnError": true,
     "strictNullChecks": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules"]
 }

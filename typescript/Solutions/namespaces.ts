@@ -8,3 +8,11 @@ import CircleMath = MyMath.Circle;
 console.log(MyMath.calculateRectangle(10, 20));
 console.log(CircleMath.calculateCircumference(3));
 console.log(PI);
+
+// Modules
+import * as Circle from './math/circle';
+import calc from './math/rectangle';
+
+console.log(Circle.PI);
+console.log(Circle.calculateCircumference(10));
+console.log(calc(10, 10));
