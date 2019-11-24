@@ -1,44 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import SeasonDisplay from './SeasonDisplay';
+import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 class App extends React.Component {
-  // special function particular to JavaScript
-  constructor(props) {
-    // super is a reference to the parent's constructor function
-    super(props);
+  state = { lat: null, errorMessage: '' };
 
-    // the only time we do direct assignment to this.state
-    this.state = { lat: null, errorMessage: '' };
-
+  componentDidMount() {
     // Geolocation function takes some time
     window.navigator.geolocation.getCurrentPosition(
-      // success callback
-      position => {
-        console.log(position);
-        // call setState a method in React.Component
-        this.setState({ lat: position.coords.latitude });
-      },
-      // failure callback
-      err => {
-        console.log(err);
-        this.setState({ errorMessage: err.message });
-      }
+      position => this.setState({ lat: position.coords.latitude }),
+      err => this.setState({ errorMessage: err.message })
     );
   }
 
-  // react says we have to define render
-  render() {
+  renderContent() {
     // conditional rendering
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error:{this.state.errorMessage}</div>;
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitute: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
 
-    return <div>Loading!</div>;
+    return <Spinner message='Please accept location request' />;
+  }
+
+  // render is required
+  render() {
+    return <div>{this.renderContent()}</div>;
   }
 }
 
