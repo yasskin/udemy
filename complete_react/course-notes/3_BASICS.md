@@ -28,9 +28,7 @@
 - Yarn
   https://yarnpkg.com/en/docs/install#windows-stable
 
-
 * Lifecycle methods - methods that get called automatically at different stages, when a component gets rendered.
 
 * Promises
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-
