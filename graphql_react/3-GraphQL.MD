@@ -20,3 +20,14 @@
    7. list
 
 graphql is self documenting!
+
+query {
+   user(id: '23') {
+      users {
+         company {
+            name
+         }
+      }
+   }
+}
+
