@@ -1,4 +1,5 @@
 import React from 'react';
+
 import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
 import ImageList from './ImageList';
@@ -6,11 +7,11 @@ import ImageList from './ImageList';
 class App extends React.Component {
   state = { images: [] };
 
-  onSearchSubmit = async term => {
+  onSearchSubmit = async (term) => {
     const response = await unsplash.get(
       'https://api.unsplash.com/search/photos',
       {
-        params: { query: term }
+        params: { query: term },
       }
     );
 

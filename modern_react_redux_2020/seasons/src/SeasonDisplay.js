@@ -4,23 +4,25 @@ import React from 'react';
 const seasonConfig = {
   summer: {
     text: "Let's hit the beach",
-    iconName: 'sun'
+    iconName: 'sun',
   },
   winter: {
     text: 'Brr it is cold!',
-    iconName: 'snowflake'
-  }
+    iconName: 'snowflake',
+  },
 };
 
 const getSeason = (lat, month) => {
   if (month > 2 && month < 9) {
+    // if you are in the northern hemisphere
     return lat > 0 ? 'summer' : 'winter';
   } else {
+    // if you are in the northern hemisphere
     return lat > 0 ? 'winter' : 'summer';
   }
 };
 
-const SeasonDisplay = props => {
+const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
   const { text, iconName } = seasonConfig[season]; // { text, iconName }
 
